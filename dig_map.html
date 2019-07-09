@@ -113,7 +113,7 @@
       });
     }
 
-    d3.csv('sa_protests.csv')
+    d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/sa_protests.csv')
       .then(response => {
       data = response.map(d => [Number(d.longitude), Number(d.latitude)]);
       renderLayer();
