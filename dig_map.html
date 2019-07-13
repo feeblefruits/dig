@@ -4,10 +4,11 @@
 
     <script src="https://unpkg.com/deck.gl@^7.0.0/dist.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
 
-    <style type="text/css">
+  </head>
+
+      <style type="text/css">
       body {
         font-family: Helvetica, Arial, sans-serif;
         width: 100vw;
@@ -15,47 +16,13 @@
         margin: 0;
       }
 
-      #control-panel {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 12px;
-        padding: 20px;
-        font-size: 12px;
-        line-height: 1.5;
-        z-index: 1;
-        background: #fff;
-        font-family: Helvetica, Arial, sans-serif;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
-      }
-
       label {
         display: inline-block;
         width: 140px;
       }
     </style>
-  </head>
 
-  <body>
-    <div id="control-panel">
-      <div>
-        <label>Radius</label>
-        <input id="radius" type="range" min="1000" max="20000" step="1000" value="1000"></input>
-        <span id="radius-value"></span>
-      </div>
-      <div>
-        <label>Coverage</label>
-        <input id="coverage" type="range" min="0" max="1" step="0.1" value="1"></input>
-        <span id="coverage-value"></span>
-      </div>
-      <div>
-        <label>Upper Percentile</label>
-        <input id="upperPercentile" type="range" min="90" max="100" step="1" value="100"></input>
-        <span id="upperPercentile-value"></span>
-      </div>
-    </div>
-  </body>
-
+  <div id='heatmap'></div>
   <script type="text/javascript">
 
     const {DeckGL, HexagonLayer} = deck;
@@ -63,60 +30,38 @@
     const deckgl = new DeckGL({
       mapboxApiAccessToken: 'pk.eyJ1IjoibWdkZXYiLCJhIjoiY2p4dzBpbnY1MDBnNzNrbXhqODhuNXBuOSJ9.WR7-Mdn3rIfJeps_BNUEBg',
       mapStyle: 'mapbox://styles/mapbox/dark-v9',
-      longitude: 24.0131,
-      latitude: -30.6766,
-      zoom: 5,
+      longitude: 28.2336,
+      latitude: -29.6100,
+      zoom: 5.5,
       minZoom: 5,
       maxZoom: 15,
-      pitch: 50.5
+      pitch: 40
     });
-
-    let data = null;
-
-    const OPTIONS = ['radius', 'coverage', 'upperPercentile'];
 
     const COLOR_RANGE = [
-      [1, 152, 189],
-      [73, 227, 206],
-      [216, 254, 181],
-      [254, 237, 177],
-      [254, 173, 84],
-      [209, 55, 78]
+      [254, 164, 110],
+      [242, 54, 53],
+      [209, 0, 31]
     ];
 
-    OPTIONS.forEach(key => {
-      document.getElementById(key).oninput = renderLayer;
+    data = d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/data/claimants_coordinates_v3.csv')
+
+    const hexagonLayer = new HexagonLayer({
+      id: 'heatmap',
+      colorRange: COLOR_RANGE,
+      data: data,
+      radius: 10000,
+      coverage: 1,
+      upperPercentile: 99,
+      elevationRange: [0, 1000],
+      elevationScale: 1000,
+      extruded: true,
+      getPosition: d => [Number(d.Longitude), Number(d.Latitude)],
+      opacity: 0.6,
     });
 
-    function renderLayer () {
-      const options = {};
-      OPTIONS.forEach(key => {
-        const value = document.getElementById(key).value;
-        document.getElementById(key + '-value').innerHTML = value;
-        options[key] = Number(value);
-      });
-
-      const hexagonLayer = new HexagonLayer({
-        id: 'heatmap',
-        colorRange: COLOR_RANGE,
-        data,
-        elevationRange: [0, 1000],
-        elevationScale: 100,
-        extruded: true,
-        getPosition: d => d,
-        opacity: 0.6,
-        ...options
-      });
-
-      deckgl.setProps({
-        layers: [hexagonLayer]
-      });
-    }
-
-    d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/data/claimants_coordinates_v2.csv')
-      .then(response => {
-      data = response.map(d => [Number(d.Longitude), Number(d.Latitude)]);
-      renderLayer();
+    deckgl.setProps({
+      layers: [hexagonLayer]
     });
 
   </script>

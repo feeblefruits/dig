@@ -1,0 +1,208 @@
+<html>
+
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="https://unpkg.com/deck.gl@^7.0.0/dist.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+
+	<style>
+
+	html {
+		background-color: #000000;
+		background-size: cover;
+		font-size: 16px;
+	}
+
+	img { 
+		width: 40%;
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+
+	#canvas-image {
+	    position: absolute;
+	    display: block;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    z-index:-1;
+	}
+
+	.heading {
+		font-size: 85px;
+    	letter-spacing: -2px;
+    	line-height: 90px;
+    	font-family: LL Circular Pro Medium Web, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+    	color: #fff;
+    	text-align: center;
+    	padding: 15px;
+    	padding-top: 45px
+	}
+
+	.heading_secondary {
+		font-size: 45px;
+    	letter-spacing: -2px;
+    	line-height: 90px;
+    	font-family: LL Circular Pro Medium Web, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+    	color: #fff;
+    	text-align: center;
+    	padding: 15px;
+	}
+
+	.text {
+	    font-family: LL Circular Pro Book Web, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	    font-size: 18px;
+	    font-weight: 300;
+	    line-height: 26px
+	}
+
+	.text-right {
+		font-family: LL Circular Pro Book Web, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	    font-size: 18px;
+	    font-weight: 300;
+	    line-height: 26px;
+	    text-align: right;
+	}
+
+	.sub_text {
+		font-family: LL Circular Pro Book Web, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	    font-size: 14px;
+	    font-weight: 300;
+	    line-height: 26px;
+	    text-align: center;
+	}
+
+	.wrapper {
+		padding: 0 10%;
+		color: #fff;
+	}
+
+	.map_rapper{
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+	}
+
+	#map {
+		width: 100%;
+		height: 35vw;
+		margin: 0 auto;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<canvas id="canvas-image"></canvas>
+
+		<div><h1 class="heading">Digging into Africa's biggest class action lawsuit</h1>
+
+		<p class="text" data-aos="fade-down" style="padding-bottom: 400px">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+		<img data-aos="fade-up" src="../dig/assets/robson-hatsukami-morgan-unsplash.jpg">
+
+		<p class="text-right" data-aos="fade-up">
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		</p>
+
+		<div class='map_rapper'>
+			<h1 class='heading_secondary'>Where the claimants are</h1>
+			<div id='map'></div>
+			<p class="sub_text"><i>The map represents the geo-locations of 45,990 claimants currently on record. Those with no street or town names are excluded. Elevation indicates Source: Spotonline via Richard Spoor Inc. Attorneys</i></p>
+		</div>
+
+	</div>
+
+  <script>
+
+  	// Floating on scroll
+
+    AOS.init({
+    	duration: 1900,
+    });
+
+    // Granim background
+
+	var granimInstance = new Granim({
+	    element: '#canvas-image',
+	    direction: 'top-bottom',
+	    image : {
+	        source: '../dig/assets/tersius-van-rhyn-unsplash.jpg',
+	        blendingMode: 'multiply',
+	        stretchMode: ['stretch', 'stretch-if-bigger'],
+	        position: ['center', 'center']
+	    },
+	    states : {
+	        "default-state": {
+	            gradients: [
+	            	['#000000', '#0d0f1c'],
+	            	['#000000', '#0d0f1c'],
+	                ['#ed1515', '#c70000'],
+	            ],
+	            transitionSpeed: 3500,
+	            loop: false
+	        }
+	    }
+	});
+
+	// mapbox map
+
+	const {DeckGL, HexagonLayer} = deck;
+
+	var map = new DeckGL({
+	  mapboxApiAccessToken: 'pk.eyJ1IjoibWdkZXYiLCJhIjoiY2p4dzBpbnY1MDBnNzNrbXhqODhuNXBuOSJ9.WR7-Mdn3rIfJeps_BNUEBg',
+	  mapStyle: 'mapbox://styles/mapbox/dark-v9',
+	  container: 'map',
+	  longitude: 28.2336,
+	  latitude: -29.6100,
+	  zoom: 5.5,
+	  minZoom: 5,
+	  maxZoom: 15,
+	  pitch: 40,
+	  scrollZoom: false,
+	  boxZoom: false,
+	  doubleClickZoom: false
+	});
+
+	const COLOR_RANGE = [
+
+	[1, 152, 189],
+	[73, 227, 206],
+	[216, 254, 181],
+	[254, 173, 84],
+    [209, 55, 78]
+
+	];
+
+	data = d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/data/claimants_coordinates_v3.csv')
+
+	const hexagonLayer = new HexagonLayer({
+	  id: 'heatmap',
+	  colorRange: COLOR_RANGE,
+	  data: data,
+	  radius: 10000,
+	  coverage: 1,
+	  upperPercentile: 99,
+	  elevationScale: 1000,
+	  extruded: true,
+	  getPosition: d => [Number(d.Longitude), Number(d.Latitude)],
+	  opacity: 0.6,
+	});
+
+	map.setProps({
+	  layers: [hexagonLayer]
+	});
+
+  </script>
+
+</body>
+</html>
