@@ -113,7 +113,7 @@
       });
     }
 
-    d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/claimants.csv')
+    d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/claimants_coordinates.csv')
       .then(response => {
       data = response.map(d => [Number(d.Longitude), Number(d.Latitude)]);
       renderLayer();
