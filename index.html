@@ -19,10 +19,22 @@
 		font-size: 16px;
 	}
 
-	img { 
-		width: 40%;
+	.family_info{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.family_image { 
+		position: static;
+		width: 50%;
 		padding-top: 60px;
 		padding-bottom: 40px;
+		padding-right: 40px;
+	}
+
+	.family_image img {
+		width: 80%;
 	}
 
 	#canvas-image {
@@ -70,7 +82,7 @@
 	    font-size: 18px;
 	    font-weight: 300;
 	    line-height: 26px;
-	    text-align: right;
+	    width: 35%;
 	}
 
 	.sub_text {
@@ -104,15 +116,22 @@
 	<div class="wrapper">
 		<canvas id="canvas-image"></canvas>
 
-		<div><h1 class="heading">Digging into Africa's biggest class action lawsuit</h1>
+		<div class='intro'>
+			<h1 class="heading">Digging into Africa's biggest class action lawsuit</h1>
 
-		<p class="text" data-aos="fade-down" style="padding-bottom: 400px">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+			<p class="text" data-aos="fade-down" style="padding-bottom: 400px">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		</div>
 
-		<img data-aos="fade-up" src="../dig/assets/robson-hatsukami-morgan-unsplash.jpg">
-
-		<p class="text-right" data-aos="fade-up">
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-		</p>
+		<div class='family_info'>
+			<div class="family_image">
+				<img data-aos="fade-up" src="../dig/assets/robson-hatsukami-morgan-unsplash.jpg">
+			</div>
+			<div class="text-right">
+				<p data-aos="fade-up">
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				</p>
+			</div>
+		</div>	
 
 		<div class='map_rapper'>
 			<h1 class='heading_secondary'>Where the claimants are</h1>
@@ -146,7 +165,7 @@
 	            gradients: [
 	            	['#000000', '#0d0f1c'],
 	            	['#000000', '#0d0f1c'],
-	                ['#ed1515', '#c70000'],
+	                ['#ff0000', '#a10000'],
 	            ],
 	            transitionSpeed: 3500,
 	            loop: false
