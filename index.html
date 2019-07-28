@@ -8,13 +8,6 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
 		<!--
 			<link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css">
-
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
-			<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-			<script src="https://unpkg.com/deck.gl@^7.0.0/dist.min.js"></script>
-	    <script src="https://d3js.org/d3.v5.min.js"></script>
-	    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-	    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
 		-->
 </head>
 <body>
@@ -35,53 +28,70 @@
 
 	<div id="singlePage" class="singlePage" data-hijacking="off" data-animation="parallax">
 		<section class="singlePage__inner singlePage__1">
-			<div>
-				<div class='family_info'>
-					<div class="family_image">
-						<img data-aos="fade-up" src="/assets/images/robson-hatsukami-morgan-unsplash.jpg">
+			<div class="the-families">
+				<div class="the-families__image-wrapper">
+					<div class="the-families__image">
+						<img data-aos="fade-up" src="/assets/images/robson-hatsukami-morgan-unsplash.jpg" class="the-families__image-thumbnail">
 					</div>
-					<div class="text-right">
-						<p data-aos="fade-up">
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-						</p>
-					</div>
+				</div>
+				<div class='the-families__caption'>
+					<p data-aos="fade-up">
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 			</div>
 		</section>
 
 		<section class="singlePage__inner singlePage__2">
-			<div>
-				<div class='map_rapper'>
-					<h1 class='heading_secondary'>Where the claimants are</h1>
-					<div id='map'></div>
-					<p class="sub_text">
-						The map represents the geo-locations of 45,990 claimants currently on record.
-						Those with no street or town names are excluded. Source: Spotonline via Richard Spoor Inc. Attorneys
-					</p>
-				</div>
+			<div class="video">
+        <video id="video__intro" class="video__intro" src="/assets/images/videos/Moses-Mug-Fine-Cut.mp4" autoplay="" loop="" muted="" preload=""></video>
+      </div>
+			<div class="video__content">
+				<h2 class="heading__secondary">
+					<span class="heading--shadow">Lorem ipsum dolor sit amet</span>
+				</h2>
+				<p data-aos="fade-up">
+					<span class="heading--shadow">
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					</span>
+					<span class="heading--shadow">
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</span>
+				</p>
+
+				<p data-aos="fade-up">
+					<span class="heading--shadow">
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					</span>
+				</p>
 			</div>
 		</section>
 
 		<section class="singlePage__inner singlePage__3">
-			<div>
-				<div class='family_info'>
-					<div class="family_image">
-						<img data-aos="fade-up" src="/assets/images/robson-hatsukami-morgan-unsplash.jpg">
-					</div>
-					<div class="text-right">
-						<p data-aos="fade-up">
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-						</p>
-					</div>
-				</div>
+
+			<div class='maps map_rapper'>
+				<h1 class='heading_secondary'>Where the claimants are</h1>
+				<div id='map'></div>
+				<p class="maps__caption">
+					The map represents the geo-locations of 45,990 claimants currently on record.
+					Those with no street or town names are excluded. Source: Spotonline via Richard Spoor Inc. Attorneys
+				</p>
 			</div>
 		</section>
 	</div>
@@ -89,5 +99,12 @@
 	<script src="/assets/js/lib/velocity.min.js"></script>
 	<script src="/assets/js/lib/velocity.ui.min.js"></script>
 	<script src="/assets/js/lib/main.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="https://unpkg.com/deck.gl@^7.0.0/dist.min.js"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
 </body>
 </html>
