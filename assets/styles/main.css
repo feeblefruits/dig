@@ -12,6 +12,8 @@ html, body {
   line-height: 1.5;
   margin: 0 auto;
   height: auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   width: 100%;
 }
 
@@ -24,7 +26,7 @@ label {
 }
 
 *:scroll {
-  
+
 }
 
 /* TYPOGRAPHY */
@@ -59,6 +61,7 @@ label {
 
 /* COMPONENTS */
 .landing {
+  background-color: #081118;
   padding: 0 10%;
   color: #fff;
   min-height: 100vh;
@@ -78,6 +81,10 @@ label {
   right: 0;
 }
 
+.singlePage {}
+.singlePage__inner {
+  height: 100vh;
+}
 .singlePage__1 {
   background: green;
   min-height: 100vh;
