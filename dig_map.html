@@ -1,68 +1,17 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>deck.gl HexagonLayer Example</title>
-
+    <meta charset="utf-8">
+    <title>Dig Story</title>
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../assets/styles/main.css">
+    
     <script src="https://unpkg.com/deck.gl@^7.0.0/dist.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
-
-  </head>
-
-      <style type="text/css">
-      body {
-        font-family: Helvetica, Arial, sans-serif;
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-      }
-
-      label {
-        display: inline-block;
-        width: 140px;
-      }
-    </style>
-
+</head>
+<body>
   <div id='heatmap'></div>
-  <script type="text/javascript">
-
-    const {DeckGL, HexagonLayer} = deck;
-
-    const deckgl = new DeckGL({
-      mapboxApiAccessToken: 'pk.eyJ1IjoibWdkZXYiLCJhIjoiY2p4dzBpbnY1MDBnNzNrbXhqODhuNXBuOSJ9.WR7-Mdn3rIfJeps_BNUEBg',
-      mapStyle: 'mapbox://styles/mapbox/dark-v9',
-      longitude: 28.2336,
-      latitude: -29.6100,
-      zoom: 5.5,
-      minZoom: 5,
-      maxZoom: 15,
-      pitch: 40
-    });
-
-    const COLOR_RANGE = [
-      [254, 164, 110],
-      [242, 54, 53],
-      [209, 0, 31]
-    ];
-
-    data = d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/data/claimants_coordinates_v3.csv')
-
-    const hexagonLayer = new HexagonLayer({
-      id: 'heatmap',
-      colorRange: COLOR_RANGE,
-      data: data,
-      radius: 10000,
-      coverage: 1,
-      upperPercentile: 99,
-      elevationRange: [0, 1000],
-      elevationScale: 1000,
-      extruded: true,
-      getPosition: d => [Number(d.Longitude), Number(d.Latitude)],
-      opacity: 0.6,
-    });
-
-    deckgl.setProps({
-      layers: [hexagonLayer]
-    });
-
-  </script>
+</body>
 </html>
