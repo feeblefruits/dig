@@ -1,8 +1,8 @@
 jQuery(document).ready(function($){
 
 	//variables
-	var hijacking= $('body').data('hijacking'),
-		animationType = $('body').data('animation'),
+	var hijacking= $('article').data('hijacking'),
+		animationType = $('article').data('animation'),
 		delta = 0,
         scrollThreshold = 5,
         actual = 1,
@@ -183,7 +183,7 @@ jQuery(document).ready(function($){
     	//if clicking on navigation - unbind scroll and animate using custom velocity animation
     	if( hijacking == 'off') {
     		$(window).off('scroll', scrollAnimation);
-    		( animationType == 'catch') ? $('body').scrollTop(section.offset().top) : section.velocity("scroll", { duration: time });
+    		( animationType == 'catch') ? $('article').scrollTop(section.offset().top) : section.velocity("scroll", { duration: time });
     	}
     }
 
@@ -207,7 +207,7 @@ jQuery(document).ready(function($){
 
 	function deviceType() {
 		//detect if desktop/mobile
-		return window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content').replace(/"/g, "").replace(/'/g, "");
+		return window.getComputedStyle(document.querySelector('article'), '::before').getPropertyValue('content').replace(/"/g, "").replace(/'/g, "");
 	}
 
 	function selectAnimation(animationName, middleScroll, direction) {
