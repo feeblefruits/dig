@@ -1,5 +1,44 @@
 jQuery(document).ready(function($){
 
+	var contentList = [
+		"Testing, 1, 2",
+		"We want more content",
+		"If you read this, we're going places",
+		"If you still follow - I take my hat off to you. Well done.",
+		"Hellow, again.",
+		];
+
+	var ts = new TwoStep({
+	    elements: document.querySelectorAll('.parent .narrative-item'),
+	    onChange: function(event) {
+	    	for (let i = 0; i < contentList.length; i++) {
+	        	console.log(contentList[i]);
+	    	}
+	    },
+	    stick: document.querySelector('.parent .sticky-outer'),
+	    narrative: [
+	        function(event) {
+	            $('.parent .floating-box').text(contentList[0]);
+	        },
+	        function(event) {
+	            $('.parent .floating-box').text(contentList[1]);
+	        },
+	        function(event) {
+	            $('.parent .floating-box').text(contentList[2]);
+	        },
+	        function(event) {
+	            $('.parent .floating-box').text(contentList[3]);
+	        },
+	        function(event) {
+	            $('.parent .floating-box').text(contentList[4]);
+	        }
+	    ],
+	    offset: {
+	        up: '-10%',
+	        down: '100%'
+	    }
+	});
+
 	//variables
 	var hijacking= $('article').data('hijacking'),
 		animationType = $('article').data('animation'),
