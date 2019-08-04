@@ -35,8 +35,8 @@ jQuery(document).ready(function($){
 	        }
 	    ],
 	    offset: {
-	        up: '-10%',
-	        down: '100%'
+	        up: '-20%',
+	        down: '50%'
 	    }
 	});
 
