@@ -74,18 +74,23 @@ article::before {
 .sticky-outer {
     position: absolute;
     height: calc(100% + 200vh);
-    width: 40%;
+    /*left: -40vh;*/
     top: -80vh;
+    left: 0;
     z-index: 1;
 }
 
 .floating-box {
-    height: 100vh;
-    background: transparent;
+
+    /*height: 100vh;*/
     padding: 100px;
     box-sizing: border-box;
     text-align: center;
     font-size: 30px;
+    color: black;
+    background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
 }
 
 .cd-section:first-of-type > div {
@@ -126,9 +131,24 @@ article::before {
   background-image: url("../assets/moses-5.jpg");
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1050px) {
   #video-background {
     display: none;
+  }
+  .cd-section:first-of-type > div {
+  background-image: url("../assets/moses-mug-pic.jpg");
+  }
+  .cd-section:nth-of-type(2) > div {
+    background-color: #2e5367;
+  }
+  .cd-section:nth-of-type(3) > div {
+    background-image: url("../assets/moses-chickens-pic.jpg");
+  }
+  .cd-section:nth-of-type(4) > div {
+    background-color: #fcb052;
+  }
+  .cd-section:nth-of-type(5) > div {
+    background-color: #f06a59;
   }
 }
 
