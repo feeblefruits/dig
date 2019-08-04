@@ -9,8 +9,9 @@ jQuery(document).ready(function($){
 		];
 
 	var ts = new TwoStep({
-	    elements: document.querySelectorAll('.parent .narrative-item'),
+	    elements: document.querySelectorAll('.parent .cd-section'),
 	    onChange: function(event) {
+	    	// printing all content array items
 	    	for (let i = 0; i < contentList.length; i++) {
 	        	console.log(contentList[i]);
 	    	}
