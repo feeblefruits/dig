@@ -74,9 +74,8 @@ article::before {
 .sticky-outer {
     position: absolute;
     height: calc(100% + 200vh);
-    /*left: -40vh;*/
     top: -80vh;
-    left: 0;
+    left: 40%;
     z-index: 1;
 }
 
@@ -84,9 +83,8 @@ article::before {
 
     /*height: 100vh;*/
     padding: 100px;
-    box-sizing: border-box;
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
     color: black;
     background-color: #ffffff;
     opacity: 0.6;
@@ -94,18 +92,45 @@ article::before {
 }
 
 .cd-section:first-of-type > div {
-  /*background-image: url("../assets/moses-mug-pic.jpg");*/
+/*vid*/
 }
 .cd-section:nth-of-type(2) > div {
   background-color: #2e5367;
 }
 .cd-section:nth-of-type(3) > div {
-  /*background-image: url("../assets/moses-chickens-pic.jpg");*/
+  background-color: #2e5367;
 }
 .cd-section:nth-of-type(4) > div {
   background-color: #fcb052;
 }
 .cd-section:nth-of-type(5) > div {
+  background-image: url("../assets/5-moses-daughter-pic.jpg");
+}
+  .cd-section:nth-of-type(6) > div {
+  background-color: #f06a59;
+}
+  .cd-section:nth-of-type(7) > div {
+/*vid*/
+}
+  .cd-section:nth-of-type(8) > div {
+  background-color: #f06a59;
+}
+  .cd-section:nth-of-type(9) > div {
+/*vid*/
+}
+  .cd-section:nth-of-type(10) > div {
+  background-color: #f06a59;
+}
+  .cd-section:nth-of-type(11) > div {
+  background-color: #f06a59;
+}
+  .cd-section:nth-of-type(12) > div {
+  background-color: #f06a59;
+}
+  .cd-section:nth-of-type(13) > div {
+  background-color: #f06a59;
+}
+  .cd-section:nth-of-type(14) > div {
   background-color: #f06a59;
 }
 
@@ -116,19 +141,46 @@ article::before {
   /*overflow: auto;*/
 }
 [data-animation="opacity"] .cd-section:first-of-type > div {
-/**/
+/*vid*/
 }
 [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
-  background-image: url("../assets/moses-2.jpg");
+  background-image: url("../assets/2-moses-daughter.jpg");
 }
 [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
-/**/
+  background-image: url("../assets/3-moses-son.jpg");
 }
 [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
-  background-image: url("../assets/moses-4.jpg");
+  background-image: url("../assets/4-moses-pot.jpg");
 }
 [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
-  background-image: url("../assets/moses-5.jpg");
+/*vid*/
+}
+[data-animation="opacity"] .cd-section:nth-of-type(6) > div {
+  background-image: url("../assets/6-moses-x-ray.jpg");
+}
+[data-animation="opacity"] .cd-section:nth-of-type(7) > div {
+/*vid*/
+}
+[data-animation="opacity"] .cd-section:nth-of-type(8) > div {
+  background-image: url("../assets/8-lukhele-wife.jpg");
+}
+[data-animation="opacity"] .cd-section:nth-of-type(9) > div {
+/*vid*/
+}
+[data-animation="opacity"] .cd-section:nth-of-type(10) > div {
+  background-image: url("../assets/10-lukhele-chickens-pic.jpg");
+}
+[data-animation="opacity"] .cd-section:nth-of-type(11) > div {
+  background-image: url("../assets/11-dlamini-mug-pic.jpg");
+}
+[data-animation="opacity"] .cd-section:nth-of-type(12) > div {
+  background-image: url("../assets/12-dlamini-wheelchair.jpg");
+}
+[data-animation="opacity"] .cd-section:nth-of-type(13) > div {
+  background-image: url("../assets/13-dlamini-eswatini.jpg");
+}
+[data-animation="opacity"] .cd-section:nth-of-type(14) > div {
+  background-image: url("../assets/14-miners-ids.jpg");
 }
 
 @media only screen and (max-width: 1050px) {
@@ -136,18 +188,45 @@ article::before {
     display: none;
   }
   .cd-section:first-of-type > div {
-  background-image: url("../assets/moses-mug-pic.jpg");
+  background-image: url("../assets/1-moses-mug-pic.jpg");
   }
   .cd-section:nth-of-type(2) > div {
     background-color: #2e5367;
   }
   .cd-section:nth-of-type(3) > div {
-    background-image: url("../assets/moses-chickens-pic.jpg");
+    background-color: #fcb052;
   }
   .cd-section:nth-of-type(4) > div {
     background-color: #fcb052;
   }
   .cd-section:nth-of-type(5) > div {
+    background-image: url("../assets/1-moses-mug-pic.jpg");
+  }
+    .cd-section:nth-of-type(6) > div {
+    background-color: #f06a59;
+  }
+    .cd-section:nth-of-type(7) > div {
+    background-image: url("../assets/1-moses-mug-pic.jpg");
+  }
+    .cd-section:nth-of-type(8) > div {
+    background-color: #f06a59;
+  }
+    .cd-section:nth-of-type(9) > div {
+    background-image: url("../assets/1-moses-mug-pic.jpg");
+  }
+    .cd-section:nth-of-type(10) > div {
+    background-color: #f06a59;
+  }
+    .cd-section:nth-of-type(11) > div {
+    background-color: #f06a59;
+  }
+    .cd-section:nth-of-type(12) > div {
+    background-color: #f06a59;
+  }
+    .cd-section:nth-of-type(13) > div {
+    background-color: #f06a59;
+  }
+    .cd-section:nth-of-type(14) > div {
     background-color: #f06a59;
   }
 }
