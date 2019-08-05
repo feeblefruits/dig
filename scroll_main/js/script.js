@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 
 	var contentList = [
 		"Moses Mdluli (55) sits on a cushion outside with his arms crossed around his chest. He holds on tightly and coughs a couple of times. \"It's especially bad in the winter,\" he says. It\’s a warm winter afternoon at his house close to Nhlangano overlooking the mountain kingdom of Eswatini.",
-		"His children are chasing a couple of chickens in the background. \"They always talked about getting a degree. They want a bachelors in something,\" he says. \"When I see them in the morning, I\'m alive. They are what makes me alive.\"",
+		"His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. \"They always talked about getting a degree. They want a bachelors in something,\" he says. \"When I see them in the morning, I\'m alive. They are what makes me alive.\"",
 		"Up until recently Mdluli wouldn’t have been able to support his three girls and one boy to achieve all of their dreams. The silicosis picked up in the mines made sure that he could no longer do any strenuous work. He can\’t pace or walk more than 20 metres without wheezing. He says he often coughs up blood in the evenings.",
 		"Worker\'s lung, as it\'s commonly known, made him a redundant worker at mines in South Africa 14 years ago. The frail man speaks in anger about the mines and becomes animated as he gestured with his right hand: \"They don't want skorokoro,\” he says. \“As soon as they see you coughing they chase you away.\"",
 		"He\'s worked in South Africa\'s gold mines for half of his life. The Swati man started as a helper and eventually worked his way up to a line manager. These days he can\'t lift a bucket of water.",
@@ -71,8 +71,8 @@ jQuery(document).ready(function($){
 	        }
 	    ],
 	    offset: {
-	        up: '-10%',
-	        down: '100%'
+	        up: '-100%',
+	        down: '10%'
 	    }
 	});
 
