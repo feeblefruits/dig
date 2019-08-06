@@ -33,6 +33,41 @@ img {
   width: 100%;
 }
 
+/*MAP*/
+
+#scroll-map {
+  position:relative;
+  top:0;
+  bottom:0;
+  width:100%;
+}
+
+#scroll-map {
+position: relative;
+width:50%;
+}
+#features {
+width: 50%;
+margin-left: 50%;
+font-family: sans-serif;
+overflow-y: scroll;
+background-color: #fafafa;
+}
+section .map-paragraph{
+padding:  25px 50px;
+line-height: 25px;
+border-bottom: 1px solid #ddd;
+opacity: 0.2;
+font-size: 13px;
+}
+section .map-paragraph.active {
+opacity: 1;
+}
+section .map-paragraph:last-child {
+border-bottom: none;
+margin-bottom: 200px;
+}
+
 /* TYPOGRAPHY */
 .heading__hero {
   display: inline-block;

@@ -5,11 +5,12 @@ var { MapboxLayer, HexagonLayer } = deck;
 
 //Create the Mapbox map
 var map = new mapboxgl.Map({
-    container: 'map',
+    container: 'scroll-map',
     style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
     center: [26.9584, -24.7299],
     zoom: 4,
     pitch: 10,
+    bearing: 0,
     antialias: true
 });
 
@@ -35,7 +36,7 @@ var LIGHT_SETTINGS = {
 var hexagonLayer;
 
 //Add the deck.gl Custom Layer to the map once the Mapbox map loads
-map.on('style.load', () => {
+scroll-map.on('style.load', () => {
 
     hexagonLayer = new MapboxLayer({
         id: 'heatmap',
@@ -58,61 +59,37 @@ map.on('style.load', () => {
 });
 
 var chapters = {
-'baker': {
-bearing: 27,
+'africa': {
+duration: 3000,
 center: [26.9584, -24.7299],
-zoom: 7,
-pitch: 20
-},
-'aldgate': {
-duration: 6000,
-longitude: 28.2336,
-latitude: -29.6100,
-bearing: 150,
 zoom: 4,
-pitch: 0
+pitch: 10,
+bearing: 0
 },
-'london-bridge': {
-bearing: 90,
-longitude: 28.2336,
-latitude: -29.6100,
-zoom: 13,
+'eswatini': {
+duration: 3000,
+center: [31.4630, -26.5179],
+zoom: 8,
+pitch: 45,
+bearing: 20
+},
+'lesotho': {
+duration: 3000,
+bearing: 100,
+center: [27.9869, -29.4151],
+zoom: 5,
+zoom: 7,
 speed: 0.6,
-pitch: 40
+pitch: 60
 },
-'woolwich': {
-bearing: 90,
-longitude: 28.2336,
-latitude: -29.6100,
-zoom: 12.3
-},
-'gloucester': {
-bearing: 45,
-longitude: 28.2336,
-latitude: -29.6100,
-zoom: 15.3,
-pitch: 20,
-speed: 0.5
-},
-'caulfield-gardens': {
-bearing: 180,
-longitude: 28.2336,
-latitude: -29.6100,
-zoom: 12.3
-},
-'telegraph': {
-bearing: 90,
-longitude: 28.2336,
-latitude: -29.6100,
-zoom: 17.3,
-pitch: 40
-},
-'charing-cross': {
-bearing: 90,
-longitude: 28.2336,
-latitude: -29.6100,
-zoom: 14.3,
-pitch: 20
+'eastern-cape': {
+duration: 3000,
+center: [28.7781, -31.6067],
+zoom: 4,
+bearing: 60,
+zoom: 6.5,
+bearing: 100,
+pitch: 60
 }
 };
  
@@ -128,7 +105,7 @@ var chapterName = chapterNames[i];
 }
 };
  
-var activeChapterName = 'baker';
+var activeChapterName = 'africa';
   function setActiveChapter(chapterName) {
   if (chapterName === activeChapterName) return;
  
