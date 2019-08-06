@@ -121,7 +121,7 @@ article::before {
 /*vid*/
 }
   .cd-section:nth-of-type(10) > div {
-  background-color: #f06a59;
+  /*background-color: #f06a59;*/
 }
   .cd-section:nth-of-type(11) > div {
   background-color: #f06a59;
@@ -170,7 +170,7 @@ article::before {
 /*vid*/
 }
 [data-animation="opacity"] .cd-section:nth-of-type(10) > div {
-  background-image: url("../assets/10-lukhele-chickens-pic.jpg");
+  /*background-image: url("../assets/10-lukhele-chickens-pic.jpg");*/
 }
 [data-animation="opacity"] .cd-section:nth-of-type(11) > div {
   background-image: url("../assets/11-dlamini-mug-pic.jpg");
@@ -187,12 +187,13 @@ article::before {
 
 @media only screen and (max-width: 1050px) {
 
-  .sticky-outer {
-  position: absolute;
-  height: calc(100% + 200vh);
-  top: -80vh;
-  padding: 10px;
-  z-index: 1;
+.sticky-outer {
+    position: absolute;
+    height: calc(100% + 200vh);
+    width: 100%;
+    top: -80vh;
+    left: 0;
+    z-index: 1;
   }
 
   #video-background {
@@ -211,22 +212,22 @@ article::before {
     background-color: #fcb052;
   }
   .cd-section:nth-of-type(5) > div {
-    background-image: url("../assets/1-moses-mug-pic.jpg");
+    background-image: url("../assets/5-moses-daughter-pic.jpg");
   }
     .cd-section:nth-of-type(6) > div {
     background-color: #f06a59;
   }
     .cd-section:nth-of-type(7) > div {
-    background-image: url("../assets/1-moses-mug-pic.jpg");
+    background-image: url("../assets/7-lukhele-mug-pic.jpg");
   }
     .cd-section:nth-of-type(8) > div {
     background-color: #f06a59;
   }
     .cd-section:nth-of-type(9) > div {
-    background-image: url("../assets/1-moses-mug-pic.jpg");
+    background-image: url("../assets/9-lukhele-wash-pic.jpg");
   }
     .cd-section:nth-of-type(10) > div {
-    background-color: #f06a59;
+    background-image: url("../assets/10-lukhele-chickens-pic.jpg");
   }
     .cd-section:nth-of-type(11) > div {
     background-color: #f06a59;

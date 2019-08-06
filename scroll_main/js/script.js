@@ -1,16 +1,16 @@
 jQuery(document).ready(function($){
 
 	var contentList = [
-		"Moses Mdluli (55) sits on a cushion outside with his arms crossed around his chest. He holds on tightly and coughs a couple of times. \"It's especially bad in the winter,\" he says. It\’s a warm winter afternoon at his house close to Nhlangano overlooking the mountain kingdom of Eswatini.",
-		"His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. \"They always talked about getting a degree. They want a bachelors in something,\" he says. \"When I see them in the morning, I\'m alive. They are what makes me alive.\"",
-		"Up until recently Mdluli wouldn’t have been able to support his three girls and one boy to achieve all of their dreams. The silicosis picked up in the mines made sure that he could no longer do any strenuous work. He can\’t pace or walk more than 20 metres without wheezing. He says he often coughs up blood in the evenings.",
-		"Worker\'s lung, as it\'s commonly known, made him a redundant worker at mines in South Africa 14 years ago. The frail man speaks in anger about the mines and becomes animated as he gestured with his right hand: \"They don't want skorokoro,\” he says. \“As soon as they see you coughing they chase you away.\"",
-		"He\'s worked in South Africa\'s gold mines for half of his life. The Swati man started as a helper and eventually worked his way up to a line manager. These days he can\'t lift a bucket of water.",
+		"Moses Mdluli (55) sits on a cushion outside with his arms crossed around his chest. <mark>He holds on tightly and coughs a couple of times.</mark> \"It's especially bad in the winter,\" he says. It\’s a warm winter afternoon at his house close to Nhlangano overlooking the mountain kingdom of Eswatini.",
+		"His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. <mark>\"They always talked about getting a degree</mark>. They want a bachelors in something,\" he says. \"When I see them in the morning, I\'m alive. <mark>They are what makes me alive.<mark>\"",
+		"Up until recently Mdluli wouldn’t have been able to support his three girls and one boy to achieve all of their dreams. The <mark>silicosis picked up in the mines</mark> made sure that he could no longer do any strenuous work. He can\’t pace or walk more than 20 metres without wheezing. He says he often coughs up blood in the evenings.",
+		"Worker\'s lung, as it\'s commonly known, made him a redundant worker at mines in South Africa 14 years ago. <mark>The frail man speaks in anger</mark> about the mines and becomes animated: <mark>\"They don't want skorokoro,\”</mark> he says. \“As soon as they see you coughing they chase you away.\"",
+		"He\'s worked in South Africa\'s gold mines for half of his life. The Swati man started as a helper and eventually worked his way up to a line manager. <mark>These days he can\'t lift a bucket of water.</mark>",
 		"Mdluli only has one of his lungs left and wheezes when he trudges. \“The one is fucked up,\” Mdluli says angrily.",
-		"Close to Manzini in Eswatini lives Isaac Lukhele (75) started working in South Africa\’s gold mines in 1962. Since then he\’s worked at over 15 different mines across the country. In 1997 he contracted tuberculosis and in 2004 was retrenched from Western Areas gold mines due to his illness.",
+		"Close to Manzini in Eswatini lives Isaac Lukhele (75) who started working in South Africa\’s gold mines in 1962. Since then he\’s worked at over 15 different mines across the country. In 1997 he contracted tuberculosis and in 2004 was retrenched from Western Areas gold mines due to his illness.",
 		"\“When I was retrenched from the mines in 2004, the doctors told me that I will be compensated in Eswatini. But nothing has happened,\” Lukhele explains. \“I’ve got nothing to say to the mines today. They\’ve rejected me a long time ago. My only hope is with the miners association.\”",
 		"He says that in 1962 he used to earn 25 cents a day. \“Treatment wasn\’t really good. We were not treated like human beings,\” he says, adding that there used to be 50 people in one dormatory.",
-		"Today, Lukhele supports his family by farming with a handful of goats and is saving money to build a shelter for his livestock. He receives a monthly pension of R400 from government.",
+		"Today, Lukhele supports his family by farming with a handful of goats and chickens. He\'s saving money to build a shelter for his livestock. He receives a monthly pension of R400 from government.",
 		"Dumisile Dlamini who\’s the manager at the Office of Health Standards Compliance in Hlathikhulu explains that the knock-on impact of silicosis is manifold. Although silicosis is chronic, it can be treated and its symptoms kept to the minimum. However, treatments can be expensive and difficult to come by for patients who are often sickly and lack the financial means to travel.",
 		"\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older. Then you find they cannot take themselves up to the bus stations in order to come to the [medical] centres.”",
 		"Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“It is really affecting the community. As you know men are leaders of the households. Now there are many orphans left behind and many disgruntled family members who can also get sick and lack compensation,\” Dlamini says.",
@@ -28,46 +28,46 @@ jQuery(document).ready(function($){
 	    stick: document.querySelector('.parent .sticky-outer'),
 	    narrative: [
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[0]);
+	            $('.parent .floating-box').html(contentList[0]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[1]);
+	            $('.parent .floating-box').html(contentList[1]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[2]);
+	            $('.parent .floating-box').html(contentList[2]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[3]);
+	            $('.parent .floating-box').html(contentList[3]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[4]);
+	            $('.parent .floating-box').html(contentList[4]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[5]);
+	            $('.parent .floating-box').html(contentList[5]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[6]);
+	            $('.parent .floating-box').html(contentList[6]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[7]);
+	            $('.parent .floating-box').html(contentList[7]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[8]);
+	            $('.parent .floating-box').html(contentList[8]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[9]);
+	            $('.parent .floating-box').html(contentList[9]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[10]);
+	            $('.parent .floating-box').html(contentList[10]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[11]);
+	            $('.parent .floating-box').html(contentList[11]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[12]);
+	            $('.parent .floating-box').html(contentList[12]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[13]);
+	            $('.parent .floating-box').html(contentList[13]);
 	        }
 	    ],
 	    offset: {
