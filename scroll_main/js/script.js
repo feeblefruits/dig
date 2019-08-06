@@ -1,11 +1,11 @@
 jQuery(document).ready(function($){
 
 	var contentList = [
-		"Moses Mdluli (55) sits on a cushion outside with his arms crossed around his chest. <mark>He holds on tightly and coughs a couple of times.</mark> \"It's especially bad in the winter,\" he says. It\’s a warm winter afternoon at his house close to Nhlangano overlooking the mountain kingdom of Eswatini.",
-		"His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. <mark>\"They always talked about getting a degree</mark>. They want a bachelors in something,\" he says. \"When I see them in the morning, I\'m alive. <mark>They are what makes me alive.<mark>\"",
-		"Up until recently Mdluli wouldn’t have been able to support his three girls and one boy to achieve all of their dreams. The <mark>silicosis picked up in the mines</mark> made sure that he could no longer do any strenuous work. He can\’t pace or walk more than 20 metres without wheezing. He says he often coughs up blood in the evenings.",
-		"Worker\'s lung, as it\'s commonly known, made him a redundant worker at mines in South Africa 14 years ago. <mark>The frail man speaks in anger</mark> about the mines and becomes animated: <mark>\"They don't want skorokoro,\”</mark> he says. \“As soon as they see you coughing they chase you away.\"",
-		"He\'s worked in South Africa\'s gold mines for half of his life. The Swati man started as a helper and eventually worked his way up to a line manager. <mark>These days he can\'t lift a bucket of water.</mark>",
+		"Moses Mdluli (55) sits on a cushion outside with his arms crossed around his chest. He holds on tightly and coughs a couple of times. \"It's especially bad in the winter,\" he says. It\’s a warm winter afternoon at his house close to Nhlangano overlooking the mountain kingdom of Eswatini.",
+		"His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. \"They always talked about getting a degree. They want a bachelors in something,\" he says. \"When I see them in the morning, I\'m alive. They are what makes me alive.\"",
+		"Up until recently Mdluli wouldn’t have been able to support his three girls and one boy to achieve all of their dreams. The silicosis picked up in the mines made sure that he could no longer do any strenuous work. He can\’t pace or walk more than 20 metres without wheezing. He says he often coughs up blood in the evenings.",
+		"Worker\'s lung, as it\'s commonly known, made him a redundant worker at mines in South Africa 14 years ago. The frail man speaks in anger about the mines and becomes animated: \"They don't want skorokoro,\” he says. \“As soon as they see you coughing they chase you away.\"",
+		"He\'s worked in South Africa\'s gold mines for half of his life. The Swati man started as a helper and eventually worked his way up to a line manager. These days he can\'t lift a bucket of water.",
 		"Mdluli only has one of his lungs left and wheezes when he trudges. \“The one is fucked up,\” Mdluli says angrily.",
 		"Close to Manzini in Eswatini lives Isaac Lukhele (75) who started working in South Africa\’s gold mines in 1962. Since then he\’s worked at over 15 different mines across the country. In 1997 he contracted tuberculosis and in 2004 was retrenched from Western Areas gold mines due to his illness.",
 		"\“When I was retrenched from the mines in 2004, the doctors told me that I will be compensated in Eswatini. But nothing has happened,\” Lukhele explains. \“I’ve got nothing to say to the mines today. They\’ve rejected me a long time ago. My only hope is with the miners association.\”",
@@ -49,25 +49,25 @@ jQuery(document).ready(function($){
 	            $('.parent .floating-box').html(contentList[6]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[7]);
+	            $('.parent .floating-box').text(contentList[7]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[8]);
+	            $('.parent .floating-box').text(contentList[8]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[9]);
+	            $('.parent .floating-box').text(contentList[9]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[10]);
+	            $('.parent .floating-box').text(contentList[10]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[11]);
+	            $('.parent .floating-box').text(contentList[11]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[12]);
+	            $('.parent .floating-box').text(contentList[12]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[13]);
+	            $('.parent .floating-box').text(contentList[13]);
 	        }
 	    ],
 	    offset: {

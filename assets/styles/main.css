@@ -71,20 +71,9 @@ img {
   padding: 0 10%;
   color: #fff;
   min-height: 100vh;
-  height: 100%;
-}
-.landing:before {
-  animation: pulse-bg 10s infinite;
   background: url(/assets/images/tersius-van-rhyn-unsplash.jpg) center/cover;
-  content: "";
-  min-height: 100vh;
   height: 100%;
   width: 100%;
-
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
 }
 
 .singlePage {
