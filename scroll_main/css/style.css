@@ -88,6 +88,13 @@ img {
   right: 0;
 }
 
+.writing-section {
+  padding: 0 10%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #ffffff;
+}
+
 /* CALL TO ACTION */
 .scroll-cta {
   cursor: pointer;
@@ -228,7 +235,7 @@ article::before {
   background-color: #fcb052;
 }
 .cd-section:nth-of-type(5) > div {
-  background-image: url("../assets/5-moses-daughter-pic.jpg");
+  /*background-image: url("../assets/5-moses-daughter-pic.jpg");*/
 }
   .cd-section:nth-of-type(6) > div {
   background-color: #f06a59;
@@ -335,6 +342,7 @@ article::before {
   }
   .cd-section:nth-of-type(5) > div {
     background-image: url("../assets/5-moses-daughter-pic.jpg");
+    
   }
     .cd-section:nth-of-type(6) > div {
     background-color: #f06a59;
