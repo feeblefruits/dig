@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
 		"\“When I was retrenched from the mines in 2004, the doctors told me that I will be compensated in Eswatini. But nothing has happened,\” Lukhele explains. \“I’ve got nothing to say to the mines today. They\’ve rejected me a long time ago. My only hope is with the miners association.\”",
 		"He says that in 1962 he used to earn 25 cents a day. \“Treatment wasn\’t really good. We were not treated like human beings,\” he says, adding that there used to be 50 people in one dormatory.",
 		"Today, Lukhele supports his family by farming with a handful of goats and chickens. He\'s saving money to build a shelter for his livestock. He receives a monthly pension of R400 from government.",
-		"Dumisile Dlamini who\’s the manager at the Office of Health Standards Compliance in Hlathikhulu explains that the knock-on impact of silicosis is manifold. Although silicosis is chronic, it can be treated and its symptoms kept to the minimum. However, treatments can be expensive and difficult to come by for patients who are often sickly and lack the financial means to travel.",
+		"Dumisile Dlamini who\’s the manager at the Office of Health Standards Compliance in Hlathikhulu explains that the knock-on impact of silicosis is manifold. Treatments can be expensive and difficult to come by for patients who are often sickly and lack the financial means to travel.",
 		"\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older. Then you find they cannot take themselves up to the bus stations in order to come to the [medical] centres.”",
 		"Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“It is really affecting the community. As you know men are leaders of the households. Now there are many orphans left behind and many disgruntled family members who can also get sick and lack compensation,\” Dlamini says.",
 		"Mdluli and Lukhele is one of tens of thousands of former mine workers who continues to suffer the consequences of South Africa\’s once-booming gold industry. Like many others, their location, medical condition and employment history were prerequisites to build the silicosis class action and ultimately allow them to get compensated."
@@ -72,7 +72,7 @@ jQuery(document).ready(function($){
 	    ],
 	    offset: {
 	        up: '-100%',
-	        down: '10%'
+	        down: '80%'
 	    }
 	});
 

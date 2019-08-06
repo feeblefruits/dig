@@ -203,10 +203,11 @@ article::before {
 }
 .sticky-outer {
     position: absolute;
-    height: calc(100% + 200vh);
+    /*height: calc(100% + 200vh);*/
     top: 20vh;
     left: 70%;
     right: 4%;
+    bottom: 10vh;
     z-index: 1;
 }
 
@@ -318,7 +319,7 @@ article::before {
 
 .sticky-outer {
     position: absolute;
-    height: calc(100% + 200vh);
+    /*height: calc(100% + 200vh);*/
     width: 100%;
     top: 20vh;
     left: 0;

@@ -219,6 +219,7 @@ var _class = function () {
             $(opts.stick).wrapInner('<div class="two-step-sticky-wrapper"></div>');
             this.sticky = $(opts.stick).find('.two-step-sticky-wrapper').fixTo($(opts.stick));
             $('.two-step-sticky-wrapper').css('top','70%');
+            $('.two-step-sticky-wrapper').css('bottom','0%');
         }
 
         this.setKeyboard();
