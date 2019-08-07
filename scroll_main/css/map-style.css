@@ -1,0 +1,43 @@
+.map-container {
+	position: absolute;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 100%;
+	width: 100%;
+}
+
+#map { position:absolute; top:0; bottom:0; width:100%; height: 100%}
+
+.button-box {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#go-button {
+	display: block;
+	position: relative;
+	float: right;
+	width: 30%;
+	height: 40px;
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	background: #ee8a65;
+}
+
+#back-button {
+	display: block;
+	position: relative;
+	float: left;
+	width: 30%;
+	height: 40px;
+	border: none;
+	border-radius: 3px;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	background: #ee8a65;
+}

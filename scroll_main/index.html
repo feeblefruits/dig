@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="no-js">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0-beta.1/mapbox-gl.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map-style.css">
 
     <title>Main Scroll Page | Dig</title>
 </head>
@@ -19,7 +20,7 @@
             <h1 class="heading__hero">
                 <span class="heading__hero_char">How to crack Africa's biggest lawsuit</span>
             </h1>
-            <h2 class="heading__subtitle">...and the lives it brings hope to</h2>
+            <h2 class="heading__subtitle">And the lives it hopes to change</h2>
         </div>
         <div class="scroll-cta">
             <a href="#singlePage" class="scroll-cta__link">Scroll</a>
@@ -137,40 +138,32 @@
         </div>
     </article>
     <section class="writing-section">
-        <p class="writing">Building South Africa’s biggest class action lawsuit comes with a set of unique challenges. One of these challenges was to find potential claimants like Mdluli and Lukhele. The legal team had to build a database to help locate, verify and ultimately compensate the miners -- many of who live in rural parts of neighbouring countries and worked in the mines decades ago. Others have already passed away.
-
-        Ken Gliddon who assisted with this massive task welcomes about 25 boxes of workers’ records every day. Each box contains copies of about 70 former mineworkers documentation. These include identity documents, medical records, employment history and other unstructured information about the potential claimants.
-
-        Gliddon and his team at Spotonline is the technical partner of the legal firms who represented the miners Richard Spoor Inc, Abrahams Kiewitz Inc and the Legal Resources Centre. The information was sourced over the years from numerous mining companies, forums and associations.
-
-        “We needed to find clients for the class action,” explains George Khan from Richard Spoor Inc. By collecting workers’ data the team managed to build a wealth of knowledge of nearly 50,000 potential claimants so far.
-
-        Gliddon, who’s based in Cape Town, explains that his team uses a scanner to digitise the miners’ documents. Optical character recognition -- a computer technique that converts printed and handwritten text into machine-encoded text -- is then employed to extract specific data such as the ID number, address and medical condition of each individual case to create a database that can be analysed.
-
-        Using the database, the team is able to find hotspots of clients in certain areas. This is essential in tracking down more potential claimants who could otherwise be excluded from the litigation and compensatory process.
-
-        “This is critical as far as the compensatory process goes. The trustees are going to want to know where they need to go look for these people to find them in order to make sure whoever is eligible to get money gets paid their money,” says Khan. “It also helps us understand where other potential claimants are.”</p>
+        <p class="writing">Building South Africa’s biggest class action lawsuit comes with a set of unique challenges. One of these challenges was to find potential claimants like Mdluli and Lukhele. The legal team had to build a database to help locate, verify and ultimately compensate the miners -- many of who live in rural parts of neighbouring countries and worked in the mines decades ago. Others have already passed away.</p>
+        <p class="writing">Ken Gliddon who assisted with this massive task welcomes about 25 boxes of workers’ records every day. Each box contains copies of about 70 former mineworkers documentation. These include identity documents, medical records, employment history and other unstructured information about the potential claimants.</p>
+        <p class="writing">Gliddon and his team at Spotonline is the technical partner of the legal firms who represented the miners Richard Spoor Inc, Abrahams Kiewitz Inc and the Legal Resources Centre. The information was sourced over the years from numerous mining companies, forums and associations.</p>
+        <p class="writing">“We needed to find clients for the class action,” explains George Khan from Richard Spoor Inc. By collecting workers’ data the team managed to build a wealth of knowledge of nearly 50,000 potential claimants so far.</p>
+        <p class="writing">Gliddon, who’s based in Cape Town, explains that his team uses a scanner to digitise the miners’ documents. Optical character recognition -- a computer technique that converts printed and handwritten text into machine-encoded text -- is then employed to extract specific data such as the ID number, address and medical condition of each individual case to create a database that can be analysed.</p>
+        <p class="writing">Using the database, the team is able to find hotspots of clients in certain areas. This is essential in tracking down more potential claimants who could otherwise be excluded from the litigation and compensatory process.</p>
+        <p class="writing">“This is critical as far as the compensatory process goes. The trustees are going to want to know where they need to go look for these people to find them in order to make sure whoever is eligible to get money gets paid their money,” says Khan. “It also helps us understand where other potential claimants are.”</p>
     </section>
     <section>
-        <div id='scroll-map'></div>
-        <div id='features'>
-        <section id='africa' class='active map-paragraph'>
-        <h3>Africa</h3>
-        <p>November 1895. London is shrouded in fog and Sherlock Holmes and Watson pass time restlessly awaiting a new case. "The London criminal is certainly a dull fellow," Sherlock bemoans. "There have been numerous petty thefts," Watson offers in response. Just then a telegram arrives from Sherlock's brother Mycroft with a mysterious case.</p>
-        </section>
-        <section id='eswatini' class='map-paragraph'>
-        <h3>Eswatini</h3>
-        <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal on the Bruce-Partington submarine, a secret military project. Plans for the submarine had been stolen and seven of the ten missing papers were found in West's possession. Mycroft implores Sherlock to take the case and recover the three missing papers.</p>
-        </section>
-        <section id='lesotho' class='map-paragraph'>
-        <h3>Lesotho</h3>
-        <p>Holmes and Watson's investigations take them across London. Sherlock deduces that West was murdered elsewhere, then moved to Aldgate Station to create the illusion that he was crushed on the tracks by a train. On their way to Woolwich Sherlock dispatches a telegram to Mycroft at London Bridge: "Send list of all foreign spies known to be in England, with full address."</p>
-        </section>
-        <section id='eastern-cape' class='map-paragraph'>
-        <h3>Eastern Cape</h3>
-        <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
-        </section>
+        <div class="map-container">
+            <div id='map'></div>
+            <br/>
+            <div class='button-box'>
+                <button id='back-button'>Back</button>
+                <button id='go-button'>Go</button>
+            </div>
         </div>
+    </section>
+        <section class="writing-section">
+        <p class="writing">Building South Africa’s biggest class action lawsuit comes with a set of unique challenges. One of these challenges was to find potential claimants like Mdluli and Lukhele. The legal team had to build a database to help locate, verify and ultimately compensate the miners -- many of who live in rural parts of neighbouring countries and worked in the mines decades ago. Others have already passed away.</p>
+        <p class="writing">Ken Gliddon who assisted with this massive task welcomes about 25 boxes of workers’ records every day. Each box contains copies of about 70 former mineworkers documentation. These include identity documents, medical records, employment history and other unstructured information about the potential claimants.</p>
+        <p class="writing">Gliddon and his team at Spotonline is the technical partner of the legal firms who represented the miners Richard Spoor Inc, Abrahams Kiewitz Inc and the Legal Resources Centre. The information was sourced over the years from numerous mining companies, forums and associations.</p>
+        <p class="writing">“We needed to find clients for the class action,” explains George Khan from Richard Spoor Inc. By collecting workers’ data the team managed to build a wealth of knowledge of nearly 50,000 potential claimants so far.</p>
+        <p class="writing">Gliddon, who’s based in Cape Town, explains that his team uses a scanner to digitise the miners’ documents. Optical character recognition -- a computer technique that converts printed and handwritten text into machine-encoded text -- is then employed to extract specific data such as the ID number, address and medical condition of each individual case to create a database that can be analysed.</p>
+        <p class="writing">Using the database, the team is able to find hotspots of clients in certain areas. This is essential in tracking down more potential claimants who could otherwise be excluded from the litigation and compensatory process.</p>
+        <p class="writing">“This is critical as far as the compensatory process goes. The trustees are going to want to know where they need to go look for these people to find them in order to make sure whoever is eligible to get money gets paid their money,” says Khan. “It also helps us understand where other potential claimants are.”</p>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
@@ -184,7 +177,7 @@
     <script src="js/script.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/two-step.js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/map-script.js"></script>
 </body>
 
 </html>

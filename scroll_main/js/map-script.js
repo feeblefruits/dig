@@ -1,18 +1,21 @@
-
 mapboxgl.accessToken = 'pk.eyJ1IjoibWdkZXYiLCJhIjoiY2p4dzBpbnY1MDBnNzNrbXhqODhuNXBuOSJ9.WR7-Mdn3rIfJeps_BNUEBg';
 
 var { MapboxLayer, HexagonLayer } = deck;
 
+var start = [25.0288, -24.0973]
+
 //Create the Mapbox map
 var map = new mapboxgl.Map({
-    container: 'scroll-map',
-    style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
-    center: [26.9584, -24.7299],
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v10?optimize=true',
+    center: start,
     zoom: 4,
     pitch: 10,
     bearing: 0,
     antialias: true
 });
+
+map.scrollZoom.disable();
 
 // Get Data for visual
 data = d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/data/claimants_coordinates_v3.csv')
@@ -58,10 +61,12 @@ scroll-map.on('style.load', () => {
     map.addLayer(hexagonLayer, 'waterway-label');
 });
 
+
+// ADD LOCATION CHAPTERS TO FLYTO
 var chapters = {
 'africa': {
 duration: 3000,
-center: [26.9584, -24.7299],
+center: [25.0288, -24.0973],
 zoom: 4,
 pitch: 10,
 bearing: 0
@@ -88,37 +93,63 @@ center: [28.7781, -31.6067],
 zoom: 4,
 bearing: 60,
 zoom: 6.5,
-bearing: 100,
-pitch: 60
+bearing: 30,
+pitch: 70
 }
 };
- 
-// On every scroll event, check which element is on screen
-window.onscroll = function() {
-var chapterNames = Object.keys(chapters);
-  for (var i = 0; i < chapterNames.length; i++) {
-var chapterName = chapterNames[i];
-  if (isElementOnScreen(chapterName)) {
-  setActiveChapter(chapterName);
-  break;
-}
-}
-};
- 
-var activeChapterName = 'africa';
-  function setActiveChapter(chapterName) {
-  if (chapterName === activeChapterName) return;
- 
-  map.flyTo(chapters[chapterName]);
- 
-  document.getElementById(chapterName).setAttribute('class', 'active');
-  document.getElementById(activeChapterName).setAttribute('class', '');
- 
-  activeChapterName = chapterName;
-  }
- 
-function isElementOnScreen(id) {
-  var element = document.getElementById(id);
-  var bounds = element.getBoundingClientRect();
-  return bounds.top < window.innerHeight && bounds.bottom > 0;
-  }
+
+
+  var chapterNames = Object.keys(chapters);
+  var i = 0
+
+    document.getElementById('go-button').addEventListener('click', function() {
+
+      // go to next index when clicked
+      i = i +1;
+
+      // if that index is the length of the list, return to 0
+      if (i === chapterNames.length) {
+        i = 0;
+      }
+
+      var chapterProperties = chapters[chapterNames[i]]
+
+      console.log(i);
+
+      map.flyTo({
+
+      duration: chapterProperties['duration'],
+      center: chapterProperties['center'],
+      zoom: chapterProperties['zoom'],
+      bearing: chapterProperties['bearing'],
+      pitch: chapterProperties['pitch']
+
+      });
+    });
+
+    document.getElementById('back-button').addEventListener('click', function() {
+
+      var chapterNames = Object.keys(chapters);
+
+      // go to previous index when clicked
+      i = i -1;
+
+      // if index is less than the first item, go to 0
+      if (i === -1) {
+        i = 0;
+      }
+
+      var chapterProperties = chapters[chapterNames[i]]
+
+      console.log(i);
+
+      map.flyTo({
+
+      duration: chapterProperties['duration'],
+      center: chapterProperties['center'],
+      zoom: chapterProperties['zoom'],
+      bearing: chapterProperties['bearing'],
+      pitch: chapterProperties['pitch']
+
+      });
+    });
