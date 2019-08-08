@@ -71,7 +71,7 @@ jQuery(document).ready(function($){
 	        }
 	    ],
 	    offset: {
-	        up: '-100%',
+	        up: '-80%',
 	        down: '80%'
 	    }
 	});

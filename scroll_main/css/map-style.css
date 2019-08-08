@@ -43,3 +43,22 @@
 	color: #fff;
 	background: #ee8a65;
 }
+
+.sticky-outer-map {
+	padding-top: 15%;
+}
+
+#floating-box-map {
+
+	display: block;
+	position: relative;
+	float: center;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 140%;
+    color: black;
+    background-color: #ffffff;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}

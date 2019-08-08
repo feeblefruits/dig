@@ -69,14 +69,32 @@ duration: 3000,
 center: [25.0288, -24.0973],
 zoom: 4,
 pitch: 10,
-bearing: 0
+bearing: 0,
+description: "Potential claimants come from all over Southern Africa."
+},
+'zimbabwe': {
+duration: 3000,
+center: [32.6334, -20.1914],
+zoom: 8,
+pitch: 45,
+bearing: 30,
+description: "The majority of Zimbabweans come from the Chipinge bordering Mozambique"
+},
+'botswana': {
+duration: 3000,
+center: [25.1966, -25.3430],
+zoom: 8,
+pitch: 50,
+bearing: 20,
+description: "While the majority of migrant workers from Botswana come from Ramotswa, Thamaga and Mokhomba."
 },
 'eswatini': {
 duration: 3000,
 center: [31.4630, -26.5179],
 zoom: 8,
 pitch: 45,
-bearing: 20
+bearing: 20,
+description: "But the landlocked countries like Eswatini are most affected."
 },
 'lesotho': {
 duration: 3000,
@@ -85,7 +103,9 @@ center: [27.9869, -29.4151],
 zoom: 5,
 zoom: 7,
 speed: 0.6,
-pitch: 60
+pitch: 60,
+description: "Lesotho recorded most migrant workers with towns like Maseru, Leribe and Berea having more miners than the towns in South Africa."
+
 },
 'eastern-cape': {
 duration: 3000,
@@ -94,7 +114,9 @@ zoom: 4,
 bearing: 60,
 zoom: 6.5,
 bearing: 30,
-pitch: 70
+pitch: 70,
+description: "In the Eastern Cape however Lusikisiki, Port St John's and Butterworth are home most potential claimants."
+
 }
 };
 
@@ -125,6 +147,9 @@ pitch: 70
       pitch: chapterProperties['pitch']
 
       });
+
+      document.getElementById('floating-box-map').innerHTML  = chapterProperties['description'];
+
     });
 
     document.getElementById('back-button').addEventListener('click', function() {
