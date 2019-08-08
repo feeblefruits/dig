@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/map-style.css">
+    <link rel="stylesheet" href="css/horizontal-bar-chart-style.css">
 
     <title>Main Scroll Page | Dig</title>
 </head>
@@ -142,6 +143,9 @@
         <p class="writing">Building South Africa’s biggest class action lawsuit comes with a set of unique challenges. One of these challenges was to find potential claimants like Mdluli and Lukhele. The legal team had to build a database to help locate, verify and ultimately compensate the miners -- many of who live in rural parts of neighbouring countries and worked in the mines decades ago. Others have already passed away.</p>
         <p class="writing">Ken Gliddon who assisted with this massive task welcomes about 25 boxes of workers’ records every day. Each box contains copies of about 70 former mineworkers documentation. These include identity documents, medical records, employment history and other unstructured information about the potential claimants.</p>
         <p class="writing">Gliddon and his team at Spotonline is the technical partner of the legal firms who represented the miners Richard Spoor Inc, Abrahams Kiewitz Inc and the Legal Resources Centre. The information was sourced over the years from numerous mining companies, forums and associations.</p>
+        <div class="horizontal-bar-chart-container">
+            <svg id="horizontal-bar-chart"></svg>
+        </div>
         <p class="writing">“We needed to find clients for the class action,” explains George Khan from Richard Spoor Inc. By collecting workers’ data the team managed to build a wealth of knowledge of nearly 50,000 potential claimants so far.</p>
         <p class="writing">Gliddon, who’s based in Cape Town, explains that his team uses a scanner to digitise the miners’ documents. Optical character recognition -- a computer technique that converts printed and handwritten text into machine-encoded text -- is then employed to extract specific data such as the ID number, address and medical condition of each individual case to create a database that can be analysed.</p>
         <p class="writing">Using the database, the team is able to find hotspots of clients in certain areas. This is essential in tracking down more potential claimants who could otherwise be excluded from the litigation and compensatory process.</p>
@@ -151,7 +155,7 @@
         <div class="section-head">
             <h2 class="heading__secondary">Where the potential claimants are</h2>
         </div>
-        <div class="map-container">
+        <div class="map_wrapper">
             <div id='map'></div>
             <br/>
             <div class='button-box'>
@@ -178,6 +182,7 @@
     <script src="https://unpkg.com/deck.gl@latest/dist.min.js"></script>
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0-beta.1/mapbox-gl.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/horizontal-bar-chart.js"></script>
     <script src="js/script.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/two-step.js"></script>
