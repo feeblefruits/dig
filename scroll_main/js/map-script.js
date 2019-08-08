@@ -2,14 +2,14 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWdkZXYiLCJhIjoiY2p4dzBpbnY1MDBnNzNrbXhqODhuN
 
 var { MapboxLayer, HexagonLayer } = deck;
 
-var start = [25.0288, -24.0973]
+var start = [28.6790, -30.1115]
 
 //Create the Mapbox map
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v10?optimize=true',
     center: start,
-    zoom: 4,
+    zoom: 7.2,
     pitch: 10,
     bearing: 0,
     antialias: true
@@ -22,9 +22,9 @@ data = d3.csv('https://raw.githubusercontent.com/feeblefruits/dig/master/data/cl
 
 //Create the deck.gl hexagon layer and style for the data
 var COLOR_RANGE = [
-[1, 152, 189],
-[255,255,0],
-[209, 55, 78]
+[238,115,101],
+[233,74,55],
+[213,44,24]
 ];
 
 var LIGHT_SETTINGS = {
@@ -68,9 +68,9 @@ var chapters = {
 duration: 3000,
 center: [25.0288, -24.0973],
 zoom: 4,
-pitch: 10,
+pitch: 0,
 bearing: 0,
-description: "Potential claimants come from all over Southern Africa."
+description: "Lesotho and the Eastern Cape are by far the most affected regions"
 },
 'zimbabwe': {
 duration: 3000,

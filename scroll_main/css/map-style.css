@@ -27,7 +27,7 @@
 	font-size: 12px;
 	text-align: center;
 	color: #fff;
-	background: #ee8a65;
+	background: #20d1e6;
 }
 
 #back-button {
@@ -41,16 +41,17 @@
 	font-size: 12px;
 	text-align: center;
 	color: #fff;
-	background: #ee8a65;
+	background: #20d1e6;
 }
 
 .sticky-outer-map {
-	padding-top: 15%;
+	padding-top: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 #floating-box-map {
 
-	display: block;
 	position: relative;
 	float: center;
     padding: 20px;

@@ -1,20 +1,20 @@
 jQuery(document).ready(function($){
 
 	var contentList = [
-		"Moses Mdluli (55) sits on a cushion outside with his arms crossed around his chest. He holds on tightly and coughs a couple of times. \"It's especially bad in the winter,\" he says. It\’s a warm winter afternoon at his house close to Nhlangano overlooking the mountain kingdom of Eswatini.",
-		"His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. \"They always talked about getting a degree. They want a bachelors in something,\" he says. \"When I see them in the morning, I\'m alive. They are what makes me alive.\"",
-		"Up until recently Mdluli wouldn’t have been able to support his three girls and one boy to achieve all of their dreams. The silicosis picked up in the mines made sure that he could no longer do any strenuous work. He can\’t pace or walk more than 20 metres without wheezing. He says he often coughs up blood in the evenings.",
-		"Worker\'s lung, as it\'s commonly known, made him a redundant worker at mines in South Africa 14 years ago. The frail man speaks in anger about the mines and becomes animated: \"They don't want skorokoro,\” he says. \“As soon as they see you coughing they chase you away.\"",
-		"He\'s worked in South Africa\'s gold mines for half of his life. The Swati man started as a helper and eventually worked his way up to a line manager. These days he can\'t lift a bucket of water.",
-		"Mdluli only has one of his lungs left and wheezes when he trudges. \“The one is fucked up,\” Mdluli says angrily.",
-		"Close to Manzini in Eswatini lives Isaac Lukhele (75) who started working in South Africa\’s gold mines in 1962. Since then he\’s worked at over 15 different mines across the country. In 1997 he contracted tuberculosis and in 2004 was retrenched from Western Areas gold mines due to his illness.",
-		"\“When I was retrenched from the mines in 2004, the doctors told me that I will be compensated in Eswatini. But nothing has happened,\” Lukhele explains. \“I’ve got nothing to say to the mines today. They\’ve rejected me a long time ago. My only hope is with the miners association.\”",
-		"He says that in 1962 he used to earn 25 cents a day. \“Treatment wasn\’t really good. We were not treated like human beings,\” he says, adding that there used to be 50 people in one dormatory.",
-		"Today, Lukhele supports his family by farming with a handful of goats and chickens. He\'s saving money to build a shelter for his livestock. He receives a monthly pension of R400 from government.",
-		"Dumisile Dlamini who\’s the manager at the Office of Health Standards Compliance in Hlathikhulu explains that the knock-on impact of silicosis is manifold. Treatments can be expensive and difficult to come by for patients who are often sickly and lack the financial means to travel.",
-		"\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older. Then you find they cannot take themselves up to the bus stations in order to come to the [medical] centres.”",
-		"Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“It is really affecting the community. As you know men are leaders of the households. Now there are many orphans left behind and many disgruntled family members who can also get sick and lack compensation,\” Dlamini says.",
-		"Mdluli and Lukhele is one of tens of thousands of former mine workers who continues to suffer the consequences of South Africa\’s once-booming gold industry. Like many others, their location, medical condition and employment history were prerequisites to build the silicosis class action and ultimately allow them to get compensated."
+		"Moses Mdluli (55) sits on a cushion outside. His arms crossed around his chest. He holds on tightly and coughs a couple of times. \"It's especially bad in the winter,\" he says.",
+		"His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. \"When I see them in the mornings, I\'m alive.\", Mdluli shares.",
+		"The 55-year-old former mineworker can\’t pace or walk more than 20 metres without wheezing. He often coughs up blood in the evenings.",
+		"Silicosis or Worker\'s lung, as it\'s commonly known, made him redundant as a worker 14 years ago. \"They don't want skorokoro,\” he says talking about the South African gold mines.",
+		"These days he can\'t lift a bucket of water. The Swati man started as a helper and eventually worked his way up to a line manager. \“As soon as they see you coughing they chase you away.\"",
+		"Mdluli only has one of his lungs left and wheezes when he trudges. \“The one is fucked up,\” he says angrily.",
+		"Close to Manzini in Eswatini lives Isaac Lukhele (75) who started working in South Africa\’s gold mines in 1962.",
+		"\“When I was retrenched from the mines in 2004, the doctors told me I will be compensated in Eswatini. But nothing has happened,\” Lukhele recalls.",
+		"He says that in 1962 he used to earn 25 cents a day. \“Treatment wasn\’t really good. We were not treated like human beings,\” he says. There used to be 50 people in one dormatory.",
+		"Today, Lukhele supports his family by farming with a handful of goats and chickens. He\'s saving money to build a shelter for his livestock and receives a monthly pension of R400 from government.",
+		"Dumisile Dlamini is from Hlathikhulu's occupational health service centre Eswatini. She explains that treatments are expensive and difficult to come by for struggling patients.",
+		"\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older.",
+		"Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“As you know men are leaders of the households.\” Dlamini says.",
+		"Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa."
 		];
 
 	var ts = new TwoStep({
