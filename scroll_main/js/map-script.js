@@ -64,13 +64,21 @@ scroll-map.on('style.load', () => {
 
 // ADD LOCATION CHAPTERS TO FLYTO
 var chapters = {
+'start': {
+duration: 3000,
+center: [28.6790, -30.1115],
+zoom: 7,
+pitch: 0,
+bearing: 0,
+description: "Lesotho and the Eastern Cape are by far the most affected regions"
+},
 'africa': {
 duration: 3000,
 center: [25.0288, -24.0973],
 zoom: 4,
 pitch: 0,
 bearing: 0,
-description: "Lesotho and the Eastern Cape are by far the most affected regions"
+description: "But the mineworkers come from all over Southern Africa."
 },
 'zimbabwe': {
 duration: 3000,
