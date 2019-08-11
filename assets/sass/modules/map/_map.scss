@@ -1,3 +1,10 @@
+.map-section {
+  padding: 5%;
+  background: #fff;
+  position: relative;
+  overflow: auto;
+  height: 100vh;
+}
 #map-container {
   height: 100%;
   position: relative;
@@ -18,58 +25,48 @@
 	}
 }
 
-section .map-paragraph
-
 #scroll-map {
   width:50%;
   height: 100%;
   }
 
 .map_wrapper {
-	padding-top: 30px;
-	padding-bottom: 30px;
-	background-color: white;
+  width: 100%;
+height: 100%;
+position: relative;
+overflow: auto;
 }
 
 #map {
-		width: 100%;
-		height: 100%;
-		margin: 0 auto;
-		position: absolute;
-	}
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: absolute;
+}
 
 .button-box {
 	padding-left: 10%;
 	padding-right: 10%;
 }
-
-#go-button {
-	display: block;
+.nav-button {
+  color: #fff;
+	background: #e63520;
+  display: block;
 	position: relative;
-	float: right;
-	width: 30%;
+	width: 20%;
 	height: 40px;
 	padding: 10px;
 	border: none;
 	border-radius: 3px;
-	font-size: 12px;
+	font-size: 18px;
 	text-align: center;
-	color: #fff;
-	background: #20d1e6;
+  margin: 1em;
 }
-
+#go-button {
+  float: right;
+}
 #back-button {
-	display: block;
-	position: relative;
 	float: left;
-	width: 30%;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	font-size: 12px;
-	text-align: center;
-	color: #fff;
-	background: #20d1e6;
 }
 
 .sticky-outer-map {
@@ -79,15 +76,14 @@ section .map-paragraph
 }
 
 #floating-box-map {
-
 	position: relative;
 	float: center;
-    padding: 20px;
-    text-align: center;
-    font-size: 15px;
-    line-height: 140%;
-    color: black;
-    background-color: #ffffff;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 140%;
+  color: black;
+  background-color: #ffffff;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
 }

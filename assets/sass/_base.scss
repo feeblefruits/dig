@@ -16,7 +16,7 @@ html, body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -27,4 +27,9 @@ label {
 img {
   height: auto;
   width: 100%;
+}
+
+.para {
+  font-size: 18px;
+  color: #000;
 }

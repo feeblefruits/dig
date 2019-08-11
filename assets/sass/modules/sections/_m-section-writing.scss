@@ -1,0 +1,38 @@
+.writing-section {
+  background-color: #ffffff;
+  padding: 0 10%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-end;
+}
+
+.main-writing-section {
+  background-color: #ffffff;
+}
+
+.content-wrapper {
+  padding: 0 10%;
+  overflow: auto;
+}
+
+.singlePage {
+  position: relative;
+  color: #fff;
+  &__inner {
+    height: 100vh;
+  }
+  &__1 {
+    min-height: 100vh;
+    height: 100%;
+  }
+  &__2 {
+    min-height: 100vh;
+    height: 100%;
+  }
+  &__3 {
+    min-height: 100vh;
+    height: 100%;
+  }
+}
