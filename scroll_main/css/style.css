@@ -457,6 +457,15 @@ article::before {
     .cd-section:nth-of-type(14) > div {
     background-color: #f06a59;
   }
+
+  .carousel-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius:50%;
+
+  }
+
 }
 
 @media only screen and (min-width: 1050px) {

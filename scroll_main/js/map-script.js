@@ -64,21 +64,13 @@ scroll-map.on('style.load', () => {
 
 // ADD LOCATION CHAPTERS TO FLYTO
 var chapters = {
-'start': {
-duration: 3000,
-center: [28.6790, -30.1115],
-zoom: 7,
-pitch: 0,
-bearing: 0,
-description: "Lesotho and the Eastern Cape are by far the most affected regions"
-},
-'africa': {
+'lesotho-eastern-cape': {
 duration: 3000,
 center: [25.0288, -24.0973],
 zoom: 4,
 pitch: 0,
 bearing: 0,
-description: "But the mineworkers come from all over Southern Africa."
+description: "Lesotho and the Eastern Cape are by far the most affected regions"
 },
 'zimbabwe': {
 duration: 3000,
@@ -129,60 +121,59 @@ description: "In the Eastern Cape however Lusikisiki, Port St John's and Butterw
 };
 
 
-  var chapterNames = Object.keys(chapters);
-  var i = 0
+var mapPosition = 0;
+var chapterNames = Object.keys(chapters);
 
-    document.getElementById('go-button').addEventListener('click', function() {
 
-      // go to next index when clicked
-      i = i +1;
+document.getElementById('go-button').addEventListener('click', function() {
 
-      // if that index is the length of the list, return to 0
-      if (i === chapterNames.length) {
-        i = 0;
-      }
+// go to next index when clicked
+mapPosition = mapPosition +1;
 
-      var chapterProperties = chapters[chapterNames[i]]
+// if that index is the length of the list, return to 0
+if (mapPosition === chapterNames.length) {
+  mapPosition = 0;
+}
 
-      console.log(i);
+console.log(mapPosition);
 
-      map.flyTo({
+var chapterProperties = chapters[chapterNames[mapPosition]]
 
-      duration: chapterProperties['duration'],
-      center: chapterProperties['center'],
-      zoom: chapterProperties['zoom'],
-      bearing: chapterProperties['bearing'],
-      pitch: chapterProperties['pitch']
+map.flyTo({
 
-      });
+duration: chapterProperties['duration'],
+center: chapterProperties['center'],
+zoom: chapterProperties['zoom'],
+bearing: chapterProperties['bearing'],
+pitch: chapterProperties['pitch']
 
-      document.getElementById('floating-box-map').innerHTML  = chapterProperties['description'];
+});
 
-    });
+document.getElementById('floating-box-map').innerHTML  = chapterProperties['description'];
 
-    document.getElementById('back-button').addEventListener('click', function() {
+});
 
-      var chapterNames = Object.keys(chapters);
+document.getElementById('back-button').addEventListener('click', function() {
 
-      // go to previous index when clicked
-      i = i -1;
+// go to previous index when clicked
+mapPosition = mapPosition -1;
 
-      // if index is less than the first item, go to 0
-      if (i === -1) {
-        i = 0;
-      }
+// if index is less than the first item, go to 0
+if (mapPosition === -1) {
+  mapPosition = 0;
+}
 
-      var chapterProperties = chapters[chapterNames[i]]
+var chapterProperties = chapters[chapterNames[mapPosition]]
 
-      console.log(i);
+console.log(mapPosition);
 
-      map.flyTo({
+map.flyTo({
 
-      duration: chapterProperties['duration'],
-      center: chapterProperties['center'],
-      zoom: chapterProperties['zoom'],
-      bearing: chapterProperties['bearing'],
-      pitch: chapterProperties['pitch']
+duration: chapterProperties['duration'],
+center: chapterProperties['center'],
+zoom: chapterProperties['zoom'],
+bearing: chapterProperties['bearing'],
+pitch: chapterProperties['pitch']
 
-      });
-    });
+});
+});

@@ -1,41 +1,5 @@
 jQuery(document).ready(function($){
 
-	var timer = 5000;
-
-	var i = 0;
-	var max = $('#id-carousel > li').length;
-	 
-		$("#id-carousel > li").eq(i).addClass('active').css('left','0');
-		$("#id-carousel > li").eq(i + 1).addClass('active').css('left','25%');
-		$("#id-carousel > li").eq(i + 2).addClass('active').css('left','50%');
-		$("#id-carousel > li").eq(i + 3).addClass('active').css('left','75%');
-	 
-
-		setInterval(function(){ 
-
-			$("#id-carousel > li").removeClass('active');
-
-			$("#id-carousel > li").eq(i).css('transition-delay','0.25s');
-			$("#id-carousel > li").eq(i + 1).css('transition-delay','0.5s');
-			$("#id-carousel > li").eq(i + 2).css('transition-delay','0.75s');
-			$("#id-carousel > li").eq(i + 3).css('transition-delay','1s');
-
-			if (i < max-4) {
-				i = i+4; 
-			}
-
-			else { 
-				i = 0; 
-			}  
-
-			$("#id-carousel > li").eq(i).css('left','0').addClass('active').css('transition-delay','1.25s');
-			$("#id-carousel > li").eq(i + 1).css('left','25%').addClass('active').css('transition-delay','1.5s');
-			$("#id-carousel > li").eq(i + 2).css('left','50%').addClass('active').css('transition-delay','1.75s');
-			$("#id-carousel > li").eq(i + 3).css('left','75%').addClass('active').css('transition-delay','2s');
-		
-		}, timer);
-
-
 	var contentList = [
 		"Moses Mdluli (55) sits on a cushion outside. His arms crossed around his chest. He holds on tightly and coughs a couple of times. \"It's especially bad in the winter,\" he says.",
 		"His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. \"When I see them in the mornings, I\'m alive.\", Mdluli shares.",
