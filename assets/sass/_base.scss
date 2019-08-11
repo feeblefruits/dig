@@ -1,0 +1,60 @@
+html {
+  background-color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html, body {
+  background-color: #081118;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 auto;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+
+
+/* SUBCOMPONENTS */
+.intro {
+  display: inline-block;
+  position: relative;
+  overflow: auto;
+  padding: 0 5%;
+}
+
+.the-families {
+  padding: 5% 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.the-families__image-wrapper {
+  width: 35%;
+}
+.the-families__image {
+  height: 220px;
+  overflow: hidden;
+}
+
+.the-families__caption {
+  margin: 0 0 0 10%;
+  width: 50%;
+}
