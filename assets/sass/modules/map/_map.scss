@@ -1,14 +1,42 @@
+#map-container {
+  height: 100%;
+  position: relative;
+}
+
+.map-paragraph {
+	padding:  25px 50px;
+	line-height: 25px;
+	border-bottom: 1px solid #ddd;
+	opacity: 0.2;
+	font-size: 13px;
+	.active {
+		opacity: 1;
+	}
+	:last-child {
+		border-bottom: none;
+		margin-bottom: 200px;
+	}
+}
+
+section .map-paragraph
+
+#scroll-map {
+  width:50%;
+  height: 100%;
+  }
+
 .map_wrapper {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	background-color: white;
 }
+
 #map {
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-	position: absolute;
-}
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		position: absolute;
+	}
 
 .button-box {
 	padding-left: 10%;
@@ -51,14 +79,15 @@
 }
 
 #floating-box-map {
+
 	position: relative;
 	float: center;
-  padding: 20px;
-  text-align: center;
-  font-size: 15px;
-  line-height: 140%;
-  color: black;
-  background-color: #ffffff;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 140%;
+    color: black;
+    background-color: #ffffff;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
 }

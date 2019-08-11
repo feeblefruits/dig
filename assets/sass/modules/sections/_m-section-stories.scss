@@ -1,0 +1,26 @@
+.parent {
+  position: relative;
+}
+
+.sticky-outer {
+  @media only screen and (max-width: 1050px) {
+    position: absolute;
+    /*height: calc(100% + 200vh);*/
+    top: 20vh;
+    left: 70%;
+    right: 4%;
+    bottom: 10vh;
+    z-index: 1;
+  }
+}
+
+.floating-box {
+  padding: 20px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 140%;
+    color: black;
+    background-color: #ffffff;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
