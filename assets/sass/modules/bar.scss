@@ -8,11 +8,11 @@
 }
 
 .bar {
-    fill: #e63520;
+  fill: #e63520;
 }
 
 .bar:hover {
-    fill: orange;
+  fill: orange;
 }
 
 .axis path,
@@ -23,19 +23,19 @@
   shape-rendering: crispEdges;
 }
 .x path {
-    display: none;
+  display: none;
 }
 .toolTip {
-    position: absolute;
-      display: none;
-      min-width: 80px;
-      height: auto;
-      background: none repeat scroll 0 0 #ffffff;
-      border: 1px solid #6F257F;
-      padding: 14px;
-      text-align: center;
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
 }
 
 .y-axis {
-    font-size: 14px;
+  font-size: 14px;
 }

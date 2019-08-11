@@ -30,31 +30,9 @@ img {
 }
 
 
+//LOOSE CLASSES
 
-/* SUBCOMPONENTS */
-.intro {
-  display: inline-block;
-  position: relative;
-  overflow: auto;
-  padding: 0 5%;
-}
-
-.the-families {
-  padding: 5% 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.the-families__image-wrapper {
-  width: 35%;
-}
-.the-families__image {
-  height: 220px;
-  overflow: hidden;
-}
-
-.the-families__caption {
-  margin: 0 0 0 10%;
-  width: 50%;
+.center {
+  margin: 0 auto;
+  width: 400px;
 }
