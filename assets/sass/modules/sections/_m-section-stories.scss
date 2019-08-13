@@ -1,26 +1,26 @@
-.parent {
+.stories {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  background-color: #22283f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   position: relative;
-}
+  &:before {
+    content: "mobile";
+    display: none;
+    @media only screen and (min-width: 768px) {
+      content: "desktop";
+    }
+  }
 
-.sticky-outer {
-  @media only screen and (max-width: 1050px) {
-    position: absolute;
-    /*height: calc(100% + 200vh);*/
-    top: 20vh;
-    left: 70%;
-    right: 4%;
-    bottom: 10vh;
-    z-index: 1;
+  &[data-hijacking="on"] {
+    @media only screen and (min-width: 768px) {
+      overflow: hidden;
+    }
   }
 }
 
-.floating-box {
-  padding: 20px;
-    text-align: left;
-    font-size: 15px;
-    line-height: 140%;
-    color: black;
-    background-color: #ffffff;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
+.parent {
+  position: relative;
 }

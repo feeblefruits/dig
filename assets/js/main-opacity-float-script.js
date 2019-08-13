@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 		];
 
 	var ts = new TwoStep({
-	    elements: document.querySelectorAll('.parent .cd-section'),
+	    elements: document.querySelectorAll('.cd-section'),
 	    onChange: function(event) {
 	    	// printing all content array items
 	    	for (let i = 0; i < contentList.length; i++) {
@@ -28,46 +28,46 @@ jQuery(document).ready(function($){
 	    stick: document.querySelector('.parent .sticky-outer'),
 	    narrative: [
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[0]);
+	            $('.floating-box').html(contentList[0]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[1]);
+	            $('.floating-box').html(contentList[1]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[2]);
+	            $('.floating-box').html(contentList[2]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[3]);
+	            $('.floating-box').html(contentList[3]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[4]);
+	            $('.floating-box').html(contentList[4]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[5]);
+	            $('.floating-box').html(contentList[5]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').html(contentList[6]);
+	            $('.floating-box').html(contentList[6]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[7]);
+	            $('.floating-box').text(contentList[7]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[8]);
+	            $('.floating-box').text(contentList[8]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[9]);
+	            $('.floating-box').text(contentList[9]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[10]);
+	            $('.floating-box').text(contentList[10]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[11]);
+	            $('.floating-box').text(contentList[11]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[12]);
+	            $('.floating-box').text(contentList[12]);
 	        },
 	        function(event) {
-	            $('.parent .floating-box').text(contentList[13]);
+	            $('.floating-box').text(contentList[13]);
 	        }
 	    ],
 	    offset: {
@@ -77,26 +77,26 @@ jQuery(document).ready(function($){
 	});
 
 	//variables
-	var hijacking= $('article').data('hijacking'),
-		animationType = $('article').data('animation'),
+	var hijacking= $('.stories').data('hijacking'),
+		animationType = $('.stories').data('animation'),
 		delta = 0,
         scrollThreshold = 5,
         actual = 1,
         animating = false;
-    
+
     //DOM elements
     var sectionsAvailable = $('.cd-section'),
     	verticalNav = $('.cd-vertical-nav'),
     	prevArrow = verticalNav.find('a.cd-prev'),
     	nextArrow = verticalNav.find('a.cd-next');
 
-	
+
 	//check the media query and bind corresponding events
 	var MQ = deviceType(),
 		bindToggle = false;
-	
+
 	bindEvents(MQ, true);
-	
+
 	$(window).on('resize', function(){
 		MQ = deviceType();
 		bindEvents(MQ, bindToggle);
@@ -105,8 +105,8 @@ jQuery(document).ready(function($){
 	});
 
     function bindEvents(MQ, bool) {
-    	
-    	if( MQ == 'desktop' && bool) {   		
+
+    	if( MQ == 'desktop' && bool) {
     		//bind the animation to the window scroll event, arrows click and keyboard
 			if( hijacking == 'on' ) {
 				initHijacking();
@@ -117,7 +117,7 @@ jQuery(document).ready(function($){
 			}
 			prevArrow.on('click', prevSection);
     		nextArrow.on('click', nextSection);
-    		
+
     		$(document).on('keydown', function(event){
 				if( event.which=='40' && !nextArrow.hasClass('inactive') ) {
 					event.preventDefault();
@@ -149,18 +149,18 @@ jQuery(document).ready(function($){
 		var scrollTop = $(window).scrollTop(),
 			windowHeight = $(window).height(),
 			windowWidth = $(window).width();
-		
+
 		sectionsAvailable.each(function(){
 			var actualBlock = $(this),
 				offset = scrollTop - actualBlock.offset().top;
 
 			//according to animation type and window scroll, define animation parameters
 			var animationValues = setSectionAnimation(offset, windowHeight, animationType);
-			
+
 			transformSection(actualBlock.children('div'), animationValues[0], animationValues[1], animationValues[2], animationValues[3], animationValues[4]);
-			( offset >= 0 && offset < windowHeight ) ? actualBlock.addClass('visible') : actualBlock.removeClass('visible');		
+			( offset >= 0 && offset < windowHeight ) ? actualBlock.addClass('visible') : actualBlock.removeClass('visible');
 		});
-		
+
 		checkNavigation();
 	}
 
@@ -197,7 +197,7 @@ jQuery(document).ready(function($){
 
 	function scrollHijacking (event) {
 		// on mouse scroll - check if animate section
-        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) { 
+        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
             delta--;
             ( Math.abs(delta) >= scrollThreshold) && prevSection();
         } else {
@@ -210,7 +210,7 @@ jQuery(document).ready(function($){
     function prevSection(event) {
     	//go to previous section
     	typeof event !== 'undefined' && event.preventDefault();
-    	
+
     	var visibleSection = sectionsAvailable.filter('.visible'),
     		middleScroll = ( hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false;
     	visibleSection = middleScroll ? visibleSection.next('.cd-section') : visibleSection;
@@ -225,7 +225,7 @@ jQuery(document).ready(function($){
             	animating = false;
             	if( hijacking == 'off') $(window).on('scroll', scrollAnimation);
             });
-            
+
             actual = actual - 1;
         }
 
@@ -259,7 +259,7 @@ jQuery(document).ready(function($){
     	//if clicking on navigation - unbind scroll and animate using custom velocity animation
     	if( hijacking == 'off') {
     		$(window).off('scroll', scrollAnimation);
-    		( animationType == 'catch') ? $('article').scrollTop(section.offset().top) : section.velocity("scroll", { duration: time });
+    		( animationType == 'catch') ? $('.stories').scrollTop(section.offset().top) : section.velocity("scroll", { duration: time });
     	}
     }
 
@@ -283,7 +283,7 @@ jQuery(document).ready(function($){
 
 	function deviceType() {
 		//detect if desktop/mobile
-		return window.getComputedStyle(document.querySelector('article'), '::before').getPropertyValue('content').replace(/"/g, "").replace(/'/g, "");
+		return window.getComputedStyle(document.querySelector('.stories'), '::before').getPropertyValue('content').replace(/"/g, "").replace(/'/g, "");
 	}
 
 	function selectAnimation(animationName, middleScroll, direction) {
@@ -348,11 +348,11 @@ jQuery(document).ready(function($){
 			rotateX = '0deg',
 			opacity = 1,
 			boxShadowBlur = 0;
-		
+
 		if( sectionOffset >= -windowHeight && sectionOffset <= 0 ) {
 			// section entering the viewport
 			translateY = (-sectionOffset)*100/windowHeight;
-			
+
 			switch(animationName) {
 			    case 'scaleDown':
 			        scale = 1;
@@ -395,7 +395,7 @@ jQuery(document).ready(function($){
 		} else if( sectionOffset > 0 && sectionOffset <= windowHeight ) {
 			//section leaving the viewport - still has the '.visible' class
 			translateY = (-sectionOffset)*100/windowHeight;
-			
+
 			switch(animationName) {
 			    case 'scaleDown':
 			        scale = (1 - ( sectionOffset * 0.3/windowHeight)).toFixed(5);
@@ -429,7 +429,7 @@ jQuery(document).ready(function($){
 						boxShadowBlur = sectionOffset*80/windowHeight;
 					} else {
 						boxShadowBlur = 80*(1 - sectionOffset/windowHeight);
-					} 
+					}
 					break;
 				case 'opacity':
 					translateY = 0;
@@ -495,7 +495,7 @@ jQuery(document).ready(function($){
 			}
 		}
 
-		return [translateY, scale, rotateX, opacity, boxShadowBlur]; 
+		return [translateY, scale, rotateX, opacity, boxShadowBlur];
 	}
 });
 
@@ -504,21 +504,21 @@ jQuery(document).ready(function($){
 $.Velocity
     .RegisterEffect("translateUp", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { translateY: '-100%'}, 1]
         ]
     });
 $.Velocity
     .RegisterEffect("translateDown", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { translateY: '100%'}, 1]
         ]
     });
 $.Velocity
     .RegisterEffect("translateNone", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { translateY: '0', opacity: '1', scale: '1', rotateX: '0', boxShadowBlur: '0'}, 1]
         ]
     });
@@ -527,7 +527,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("scaleDown", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { opacity: '0', scale: '0.7', boxShadowBlur: '40px' }, 1]
         ]
     });
@@ -535,14 +535,14 @@ $.Velocity
 $.Velocity
     .RegisterEffect("rotation", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { opacity: '0', rotateX: '90', translateY: '-100%'}, 1]
         ]
     });
 $.Velocity
     .RegisterEffect("rotation.scroll", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { opacity: '0', rotateX: '90', translateY: '0'}, 1]
         ]
     });
@@ -550,7 +550,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("scaleDown.moveUp", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
         	[ { translateY: '-10%', scale: '0.9', boxShadowBlur: '40px'}, 0.20 ],
         	[ { translateY: '-100%' }, 0.60 ],
         	[ { translateY: '-100%', scale: '1', boxShadowBlur: '0' }, 0.20 ]
@@ -559,7 +559,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("scaleDown.moveUp.scroll", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
         	[ { translateY: '-100%', scale: '0.9', boxShadowBlur: '40px' }, 0.60 ],
         	[ { translateY: '-100%', scale: '1', boxShadowBlur: '0' }, 0.40 ]
         ]
@@ -567,7 +567,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("scaleUp.moveUp", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
         	[ { translateY: '90%', scale: '0.9', boxShadowBlur: '40px' }, 0.20 ],
         	[ { translateY: '0%' }, 0.60 ],
         	[ { translateY: '0%', scale: '1', boxShadowBlur: '0'}, 0.20 ]
@@ -576,7 +576,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("scaleUp.moveUp.scroll", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
         	[ { translateY: '0%', scale: '0.9' , boxShadowBlur: '40px' }, 0.60 ],
         	[ { translateY: '0%', scale: '1', boxShadowBlur: '0'}, 0.40 ]
         ]
@@ -584,7 +584,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("scaleDown.moveDown", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
         	[ { translateY: '10%', scale: '0.9', boxShadowBlur: '40px'}, 0.20 ],
         	[ { translateY: '100%' }, 0.60 ],
         	[ { translateY: '100%', scale: '1', boxShadowBlur: '0'}, 0.20 ]
@@ -593,7 +593,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("scaleDown.moveDown.scroll", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
         	[ { translateY: '100%', scale: '0.9', boxShadowBlur: '40px' }, 0.60 ],
         	[ { translateY: '100%', scale: '1', boxShadowBlur: '0' }, 0.40 ]
         ]
@@ -601,7 +601,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("scaleUp.moveDown", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
         	[ { translateY: '-90%', scale: '0.9', boxShadowBlur: '40px' }, 0.20 ],
         	[ { translateY: '0%' }, 0.60 ],
         	[ { translateY: '0%', scale: '1', boxShadowBlur: '0'}, 0.20 ]
@@ -611,7 +611,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("translateUp.delay", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { translateY: '0%'}, 0.8, { delay: 100 }],
         ]
     });
@@ -619,14 +619,14 @@ $.Velocity
 $.Velocity
     .RegisterEffect("hide.scaleUp", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { opacity: '0', scale: '1.2'}, 1 ]
         ]
     });
 $.Velocity
     .RegisterEffect("hide.scaleDown", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { opacity: '0', scale: '0.8'}, 1 ]
         ]
     });
@@ -634,7 +634,7 @@ $.Velocity
 $.Velocity
     .RegisterEffect("translateUp.half", {
     	defaultDuration: 1,
-        calls: [ 
+        calls: [
             [ { translateY: '-50%'}, 1]
         ]
     });

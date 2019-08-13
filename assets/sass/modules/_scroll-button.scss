@@ -1,11 +1,18 @@
 .scroll-cta {
   cursor: pointer;
-  border-top:2px solid orange;
   padding: 10px 0;
   margin: 5% auto;
   position: relative;
   text-align: center;
-  width: 5%;
+  width: 15%;
+  &:before {
+    content: "";
+    border-top: 4px solid #e63520;
+    display: block;
+    width: 12%;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .scroll-cta__link {

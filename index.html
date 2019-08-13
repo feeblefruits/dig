@@ -6,10 +6,8 @@
     <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-
-    <!--TO CLEANUP
+    <!--TO CLEANUP-->
     <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0-beta.1/mapbox-gl.css">
-    -->
 </head>
 <body>
 
@@ -41,6 +39,96 @@
     </div>
   </section>
 
+  <section class="stories" data-hijacking="off" data-animation="opacity">
+    <div class="cd-section visible">
+      <div class="cd-section__general">
+        <div class="video-background">
+          <video class='center' autoplay loop id="video-background" muted plays-inline>
+            <source src="/assets/media/1-moses-mug-vid.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="video-background">
+        <div class="video-background">
+          <video class='center' autoplay loop id="video-background" muted plays-inline>
+            <source src="/assets/media/7-lukhele-mug-vid.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="video-background">
+          <video class='center' autoplay loop id="video-background" muted plays-inline>
+            <source src="/assets/media/10-lukhele-chickens-vid.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="cd-section">
+      <div class="cd-section__general">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+    <div class="sticky-outer">
+      <div class="floating-box"></div>
+    </div>
+  </section>
 
   <section class="main-writing-section">
     <div class="content-wrapper">
@@ -230,34 +318,24 @@
     </div>
   </section>
 
-  <section class="map-section">
-    <div class="map_wrapper">
-      <div id="map"></div>
-      <div class="button-box">
-        <button id="back-button" class="nav-button">Back</button>
-        <button id="go-button" class="nav-button">Go</button>
-      </div>
-      <div class="sticky-outer-map">
-        <div id="floating-box-map">
-          <p>Lesotho and the Eastern Cape are by far the most affected regions by the disease.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
+  <!-- CD SECTION OPACITY TRANSITION -->
 	<script src="/assets/js/lib/jquery-2.1.4.js"></script>
 	<script src="/assets/js/lib/velocity.min.js"></script>
 	<script src="/assets/js/lib/velocity.ui.min.js"></script>
+  <script src="/assets/js/main-opacity-float-script.js"></script>
+
+  <!-- ?? -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fixto/0.5.0/fixto.min.js"></script>
-  <script src="https://unpkg.com/deck.gl@latest/dist.min.js"></script>
-  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0-beta.1/mapbox-gl.js"></script>
+
+  <!-- CHARTS -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="/assets/js/horizontal-bar-chart.js"></script>
-  <script src="/assets/js/main-opacity-float-script.js"></script>
+
+  <!-- CAROUSEL -->
   <script src="/assets/js/carousel-script.js"></script>
+
+  <!-- AUTO GENERATE CD SECTION CONTENT -->
   <script src="/assets/js/two-step.js"></script>
-  <script src="/assets/js/map-script.js"></script>
 </body>
 </html>
