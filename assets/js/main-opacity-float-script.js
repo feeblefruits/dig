@@ -25,7 +25,7 @@ jQuery(document).ready(function($){
 	        	console.log(contentList[i]);
 	    	}
 	    },
-	    stick: document.querySelector('.parent .sticky-outer'),
+	    stick: document.querySelector('.sticky-outer'),
 	    narrative: [
 	        function(event) {
 	            $('.floating-box').html(contentList[0]);
