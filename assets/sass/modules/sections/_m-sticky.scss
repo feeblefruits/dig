@@ -1,8 +1,8 @@
 .sticky-outer {
   padding: 2em 0;
   @media only screen and (min-width: 768px) {
-    position: fixed;
-    top: 68%;
+    position: sticky;
+    top: 20vh;
     left: 70%;
     right: 4%;
     bottom: 10vh;
@@ -10,6 +10,7 @@
     min-height: 400px;
   }
 }
+
 
 .floating-box {
   padding: 20px;
