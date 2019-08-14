@@ -1,0 +1,17 @@
+.the-families {
+  padding: 5% 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__image {
+    height: 220px;
+    overflow: hidden;
+    &-wrapper {
+      width: 35%;
+    }
+  }
+  &__caption {
+    margin: 0 0 0 10%;
+    width: 50%;
+  }
+}
