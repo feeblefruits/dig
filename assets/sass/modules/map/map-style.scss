@@ -1,3 +1,7 @@
+.map-wrapper {
+    height: 100vh;
+}
+
 #map {
     position: absolute;
     top:0;
@@ -18,12 +22,6 @@
     background-color: transparent;
 }
 
-.scroll-notification {
-    position: sticky;
-    color: black;
-    bottom: 0px;
-}
-
 .map-chapter {
     padding-top: 50vh;
     padding-bottom: 50vh;
@@ -32,17 +30,23 @@
     line-height: 25px;
     opacity: 0.99;
 
-    p {
-        padding: 20px;
-        text-align: left;
-        font-size: 15px;
-        line-height: 140%;
-        color: black;
-        background-color: #ffffff;
-        opacity: 0.9;
-        filter: alpha(opacity=90);
-    }
+}
 
+.scroll-notification {
+    position: sticky;
+    color: black;
+    bottom: 0px;
+}
+
+.map-chapter p {
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 140%;
+    color: black;
+    background-color: #ffffff;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
 }
 
 .map-chapter.active {
