@@ -1,0 +1,91 @@
+.map-section {
+  padding: 5%;
+  background: #fff;
+  position: relative;
+  overflow: auto;
+  @media only screen and (min-width: 768px)  {
+    height: 100vh;
+  }
+}
+#map-container {
+  height: 100%;
+  position: relative;
+}
+
+.map-paragraph {
+	padding:  25px 50px;
+	line-height: 25px;
+	border-bottom: 1px solid #ddd;
+	opacity: 0.2;
+	font-size: 13px;
+	.active {
+		opacity: 1;
+	}
+	:last-child {
+		border-bottom: none;
+		margin-bottom: 200px;
+	}
+}
+
+#scroll-map {
+  width:50%;
+  height: 100%;
+  }
+
+.map_wrapper {
+  width: 100%;
+height: 100%;
+position: relative;
+overflow: auto;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: absolute;
+}
+
+.button-box {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.nav-button {
+  color: #fff;
+	background: #e63520;
+  display: block;
+	position: relative;
+	width: 20%;
+	height: 40px;
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+	font-size: 18px;
+	text-align: center;
+  margin: 1em;
+}
+#go-button {
+  float: right;
+}
+#back-button {
+	float: left;
+}
+
+.sticky-outer-map {
+	padding-top: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#floating-box-map {
+	position: relative;
+	float: center;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 140%;
+  color: black;
+  background-color: #ffffff;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
