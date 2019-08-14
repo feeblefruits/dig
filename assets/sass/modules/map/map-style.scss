@@ -1,20 +1,22 @@
 .map-wrapper {
     height: 100vh;
+    position: relative;
 }
 
 #map {
     position: absolute;
-    top:0;
-    bottom:0;
-    width:100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 #map {
-    position: fixed;
-    width:100%;
+    width: 100%;
 }
 
+
 #features {
+    height: 100%;
     width: 50%;
     margin-left: 50%;
     font-family: sans-serif;

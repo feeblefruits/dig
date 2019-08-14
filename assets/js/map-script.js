@@ -142,5 +142,8 @@ activeChapterName = chapterName;
 function isElementOnScreen(id) {
 var element = document.getElementById(id);
 var bounds = element.getBoundingClientRect();
+console.log(bounds);
+
 return bounds.top < window.innerHeight && bounds.bottom > 0;
+
 }
