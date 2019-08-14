@@ -1,0 +1,23 @@
+.sticky-outer {
+  padding: 2em 0;
+  @media only screen and (min-width: 768px) {
+    position: fixed;
+    top: 68%;
+    left: 70%;
+    right: 4%;
+    bottom: 10vh;
+    z-index: 1;
+    min-height: 400px;
+  }
+}
+
+.floating-box {
+  padding: 20px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 140%;
+  color: black;
+  background-color: #ffffff;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
