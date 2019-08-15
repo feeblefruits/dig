@@ -15,9 +15,6 @@ jQuery(document).ready(function($){
 		"\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older.",
 		"Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“As you know men are leaders of the households.\” Dlamini says.",
 		"Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa.",
-		"\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older.",
-		"Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“As you know men are leaders of the households.\” Dlamini says.",
-		"Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa."
 		];
 
 	var ts = new TwoStep({
@@ -71,15 +68,6 @@ jQuery(document).ready(function($){
 	        },
 	        function(event) {
 	            $('.floating-box').text(contentList[13]);
-	        },
-	        function(event) {
-	            $('.floating-box').text(contentList[14]);
-	        },
-	        function(event) {
-	            $('.floating-box').text(contentList[15]);
-	        },
-	        function(event) {
-	            $('.floating-box').text(contentList[16]);
 	        }
 	    ],
 	    offset: {
