@@ -62,7 +62,6 @@
 //DATA ANIMATION
 [data-animation="opacity"]  {
   .cd-section.visible > div {
-    z-index: 1;
   }
   .cd-section > div {
     background-position: center center;
@@ -125,7 +124,7 @@
   background-color: #2e5367;
 }
 [data-animation="opacity"] .cd-section:nth-of-type(9) > div {
-  background-image: url("/assets/images/9-lukhele-wash-pic.jpg");
+  background-image: url("/assets/images/9-lukhele-washline-pic.jpg");
 }
 
 .cd-section:nth-of-type(10) > div {
