@@ -20,12 +20,12 @@ jQuery(document).ready(function($){
 	var ts = new TwoStep({
 	    elements: document.querySelectorAll('.cd-section'),
 	    onChange: function(event) {
-	    	// printing all content array items
+
 	    	for (let i = 0; i < contentList.length; i++) {
 	        	console.log(contentList[i]);
 	    	}
 	    },
-	    stick: document.querySelector('.parent .sticky-outer'),
+	    stick: document.querySelector('.sticky-outer'),
 	    narrative: [
 	        function(event) {
 	            $('.floating-box').html(contentList[0]);
