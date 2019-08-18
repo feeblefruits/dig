@@ -1,11 +1,14 @@
 .stories {
-  font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
-  color: #ffffff;
   background-color: #22283f;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+
+  overflow: auto;
   &:before {
     content: "mobile";
     display: none;
@@ -19,8 +22,4 @@
       overflow: hidden;
     }
   }
-}
-
-.parent {
-  position: relative;
 }
