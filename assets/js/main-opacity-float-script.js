@@ -14,11 +14,11 @@ jQuery(document).ready(function($){
 		"Dumisile Dlamini is from Hlathikhulu's occupational health service centre Eswatini. She explains that treatments are expensive and difficult to come by for struggling patients.",
 		"\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older.",
 		"Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“As you know men are leaders of the households.\” Dlamini says.",
-		"Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa."
+		"Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa.",
 		];
 
 	var ts = new TwoStep({
-	    elements: document.querySelectorAll('.cd-section'),
+	    elements: document.querySelectorAll('.stories .cd-section'),
 	    onChange: function(event) {
 
 	    	for (let i = 0; i < contentList.length; i++) {
