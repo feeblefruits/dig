@@ -381,13 +381,10 @@
           elements: document.querySelectorAll('.stories .cd-section'),
           stick: document.querySelector('.stories .sticky-outer'),
           onChange: function(event) {
-
-            console.log(event.index == -2);
-            if (event.index < 0) {
-              stickyOuter[0].style.position = "fixed";
-            } else if(event.index > ts.elements.length) {
-              stickyOuter[0].style.position = "fixed";
-            }
+            stickyOuter[0].style.position = "fixed";
+            // if(event.index > ts.elements.length) {
+            //   stickyOuter[0].style.position = "fixed";
+            // }
           },
           narrative: [
               function(event) {
