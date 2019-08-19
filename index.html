@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 <body>
-	<section class="landing">
+	<section class="landing section-first">
 		<div class="landing__intro">
       <ul class="landing-list">
         <li class="landing-list__item">
@@ -27,11 +27,12 @@
   			</h1>
       </div>
 		</div>
-		<div id="scroll" class="scroll-cta">
-			<a href="#secondPage" class="scroll-cta__link">Scroll</a>
+		<div  class="scroll-cta">
+			<a href="#" class="scroll-cta__link">Scroll</a>
 		</div>
 	</section>
-  <section id="secondPage" class="writing-section">
+
+  <section id="secondPage" class="section-secondary">
     <div class="writing-inner">
       <p class="para">
         <span class="firstcharacter">I</span>t took a century of commissions, investigations,
@@ -47,6 +48,9 @@
         Africa's biggest class action lawsuit and ultimately compensate those affected.
       </p>
     </div>
+    <div class="scroll-cta">
+			<a href="#" class="scroll-cta__link">Scroll</a>
+		</div>
   </section>
   <!-- <section class="stories" data-hijacking="off" data-animation="opacity">
     <div class="narrative">
@@ -470,13 +474,13 @@
     });
 
 
-
+    //Issue Keep section two after scroll | Keep scroll state
     var page = $('html, body'),
         viewportHeight = $(window).height();
     $(function() {
       windowResize();
     });
-    $("#scroll").on("click",".scroll-cta__link", function(event) {
+    $(".scroll-cta").on("click",".scroll-cta__link", function(event) {
       var $this = $(this),
           currentSlideHeight = $(this).closest(".landing").height();
       page.animate({
