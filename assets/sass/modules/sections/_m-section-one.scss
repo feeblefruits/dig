@@ -1,0 +1,42 @@
+.landing {
+  background: url("/assets/images/0-hlatijhulu-landscape.jpg") no-repeat 0 0/cover;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  @media only screen and (min-width: 768px)  {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  &__intro {
+    margin: 0 auto;
+    position: relative;
+    overflow: auto;
+  }
+  &__inner {
+    display: inline-block;
+    @media only screen and (min-width: 768px) {
+      padding: 10% 0;
+    }
+  }
+
+  &-list {
+    margin: 0 auto;
+    padding: 1em 5%;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+      list-style: none;
+      vertical-align: middle;
+      display: inline-block;
+      text-align: left;
+    }
+    &__image {
+      height: auto;
+      width: 8%;
+    }
+    &__anchor {
+      overflow: auto;
+    }
+  }
+}

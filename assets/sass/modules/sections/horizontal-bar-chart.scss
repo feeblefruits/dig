@@ -8,17 +8,16 @@
 }
 
 .bar {
-  fill: #e63520;
-}
-
-.bar:hover {
-  fill: orange;
+  fill: $vivid_red;
+  :hover {
+    fill: $orange;
+  }
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #D4D8DA;
+  stroke: $light_grayish_blue;
   stroke-width: 1px;
   shape-rendering: crispEdges;
 }
@@ -31,7 +30,7 @@
   min-width: 80px;
   height: auto;
   background: none repeat scroll 0 0 #ffffff;
-  border: 1px solid #6F257F;
+  border: 1px solid $dark_magenta;
   padding: 14px;
   text-align: center;
 }

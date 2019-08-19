@@ -6,8 +6,8 @@
   align-items: center;
   align-content: flex-end;
   @media only screen and (min-width: 768px)  {
-    padding: 10% 30%; //Review 100vh & padding
-    min-height: 100vh;
+    padding: 10% 30%;
+    height: 100%;
   }
 }
 
@@ -24,18 +24,15 @@
   position: relative;
   color: #fff;
   &__inner {
-    height: 100vh;
+    height: 100%;
   }
   &__1 {
-    min-height: 100vh;
     height: 100%;
   }
   &__2 {
-    min-height: 100vh;
     height: 100%;
   }
   &__3 {
-    min-height: 100vh;
     height: 100%;
   }
 }

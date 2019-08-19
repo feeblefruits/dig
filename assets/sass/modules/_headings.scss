@@ -12,9 +12,14 @@
     }
     &_char {
       background: rgba(0,0,0,0.1);
+      border-radius: 5px;
       padding: 0 0.5em;
       display: inline;
     }
+  }
+  &__micro {
+    color: #fff;
+    text-transform: uppercase;
   }
   &__medium {
     display: block;
@@ -32,11 +37,9 @@
       padding: 2em 0;
     }
   }
-
   &__caption {
     font-size: 18px;
   }
-
   &__secondary {
     font-size: 55px;
     padding: 0 0 1em;
