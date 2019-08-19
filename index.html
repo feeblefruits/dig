@@ -27,12 +27,11 @@
   			</h1>
       </div>
 		</div>
-
-		<div class="scroll-cta">
+		<div id="scroll" class="scroll-cta">
 			<a href="#secondPage" class="scroll-cta__link">Scroll</a>
 		</div>
 	</section>
-  <!-- <section id="secondPage" class="writing-section">
+  <section id="secondPage" class="writing-section">
     <div class="writing-inner">
       <p class="para">
         <span class="firstcharacter">I</span>t took a century of commissions, investigations,
@@ -49,7 +48,7 @@
       </p>
     </div>
   </section>
-  <section class="stories" data-hijacking="off" data-animation="opacity">
+  <!-- <section class="stories" data-hijacking="off" data-animation="opacity">
     <div class="narrative">
       <div class="cd-section visible">
         <div class="cd-section__general">
@@ -469,6 +468,28 @@
           }
       });
     });
+
+
+
+    var page = $('html, body'),
+        viewportHeight = $(window).height();
+    $(function() {
+      windowResize();
+    });
+    $("#scroll").on("click",".scroll-cta__link", function(event) {
+      var $this = $(this),
+          currentSlideHeight = $(this).closest(".landing").height();
+      page.animate({
+  		  scrollTop: page.scrollTop() + currentSlideHeight,
+  	  }, 100);
+  	  event.preventDefault();
+    });
+
+    function windowResize() {
+      $(window).resize(function(e) {
+        viewportHeight = $(window).height();
+      });
+    }
   </script>
 </body>
 </html>
