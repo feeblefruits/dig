@@ -1,10 +1,9 @@
 .landing {
-  background: url("/assets/images/0-hlatijhulu-landscape.jpg") no-repeat 0 0/100%;
+  background: url("/assets/images/0-hlatijhulu-landscape.jpg") no-repeat 0 0/cover;
   color: #fff;
-  height: 100%;
   margin: 0 auto;
   text-align: center;
   @media only screen and (min-width: 768px)  {
-    min-height: 100vh;
+    height: 100vh;
   }
 }

@@ -1,21 +1,22 @@
 .writing-section {
   background-color: #ffffff;
-  padding: 10% 30%;
+  padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: flex-end;
   @media only screen and (min-width: 768px)  {
+    padding: 10% 30%; //Review 100vh & padding
     min-height: 100vh;
   }
 }
 
 .main-writing-section {
   background-color: #ffffff;
+  padding: 10% 0 1em;
 }
-
 .content-wrapper {
-  padding: 10% 30%;
+  padding: 1em 30%;
   overflow: auto;
 }
 
