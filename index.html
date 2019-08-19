@@ -11,15 +11,17 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 <body>
+  <header class="header">
+    <ul class="header-list">
+      <li class="header-list__item">
+        <a href="#" class="header-list__anchor">
+          <img class="header-list__image" src="/assets/images/icons/amp.png">
+        </a>
+      </li>
+    </ul>
+  </header>
 	<section class="landing section-first">
 		<div class="landing__intro">
-      <ul class="landing-list">
-        <li class="landing-list__item">
-          <a href="#" class="landing-list__anchor">
-            <img class="landing-list__image" src="/assets/images/icons/amp.png">
-          </a>
-        </li>
-      </ul>
       <div class="landing__inner">
   			<h1 class="heading__hero">
   				<span class="heading__hero_char">How to crack Africa's</span>
@@ -27,13 +29,13 @@
   			</h1>
       </div>
 		</div>
+
 		<div  class="scroll-cta">
 			<a href="#" class="scroll-cta__link">Scroll</a>
 		</div>
 	</section>
-
-  <section id="secondPage" class="section-secondary">
-    <div class="writing-inner">
+  <section id="second_page" class="section-secondary">
+    <div class="section-secondary__inner">
       <p class="para">
         <span class="firstcharacter">I</span>t took a century of commissions, investigations,
         litigations, acts and reports for the mining industry to finally agree to the
@@ -48,157 +50,108 @@
         Africa's biggest class action lawsuit and ultimately compensate those affected.
       </p>
     </div>
+
     <div class="scroll-cta">
 			<a href="#" class="scroll-cta__link">Scroll</a>
 		</div>
   </section>
-  <!-- <section class="stories" data-hijacking="off" data-animation="opacity">
-    <div class="narrative">
-      <div class="cd-section visible">
-        <div class="cd-section__general">
-          <div class="video-background">
-            <video class='center' autoplay loop id="video-background" muted plays-inline>
-              <source src="/assets/media/1-moses-mug-vid.mp4" type="video/mp4">
-              <source src="/assets/media/1-moses-mug-vid.mp4" type="video/WebM">
-            </video>
-          </div>
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="carousel">
-        <div class="carousel__container">
-          <ul id="id-carousel" class='carousel__list'>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/1.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/2.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/3.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/4.jpg"></li>
 
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/5.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/6.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/7.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/8.jpg"></li>
-
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/9.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/10.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/11.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/12.jpg"></li>
-
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/13.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/14.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/15.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/16.jpg"></li>
-
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/17.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/18.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/19.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/20.jpg"></li>
-
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/21.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/22.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/23.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/24.jpg"></li>
-
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/25.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/26.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/27.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/28.jpg"></li>
-
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/29.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/30.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/31.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/32.jpg"></li>
-
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/33.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/34.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/35.jpg"></li>
-          <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/36.jpg"></li>
-        </ul>
-        </div>
-        <h4 class="heading__medium">
-          Four out of 51,000 identified potential claimants of South Africa's R5-billion silicosis settlement.
-        </h4>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="video-background">
-            <video class='center' autoplay loop id="video-background" muted plays-inline>
-              <source src="/assets/media/7-lukhele-mug-vid.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="video-background">
-            <video class='center' autoplay loop id="video-background" muted plays-inline>
-              <source src="/assets/media/10-lukhele-chickens-vid.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
-      </div>
-      <div class="cd-section">
-        <div class="cd-section__general">
-          <div class="inner-content"></div>
-        </div>
+  <section class="narrative" data-hijacking="on" data-animation="opacity">
+    <!--
+    <div class="narrative__wrapper"></div>
+    <div class="narrative__sticky">
+      <div class="narrative__floatBox"></div>
+    </div>
+    -->
+    <div class="narrative__item visible">
+      <div class="narrative__content narrative__video">
+        <video autoplay loop class="background-video" muted plays-inline>
+          <source src="/assets/media/1-moses-mug-vid.mp4" type="video/mp4">
+          <source src="/assets/media/1-moses-mug-vid.mp4" type="video/WebM">
+        </video>
       </div>
     </div>
-    <div class="sticky-outer">
-      <div class="floating-box"></div>
+
+    <div class="narrative__item">
+      <div class="narrative__content">
+      </div>
     </div>
+
+    <div class="narrative__item">
+      <div class="narrative__content narrative__video">
+        <video autoplay loop class="background-video" muted plays-inline>
+          <source src="/assets/media/10-lukhele-chickens-vid.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <nav class="navigation">
+      <ul class="navigation-list">
+        <li class="navigation-list__item">
+          <a href="#0" class="navigation-list__anchor navigation-list__prev inactive">Next</a>
+        </li>
+        <li class="navigation-list__item">
+          <a href="#0" class="navigation-list__anchor navigation-list__next">Prev</a>
+        </li>
+      </ul>
+    </nav>
+
+
   </section>
-  <section class="main-writing-section">
+  <!--<section class="main-writing-section">
+  <div class="carousel">
+    <div class="carousel__container">
+      <ul id="id-carousel" class='carousel__list'>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/1.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/2.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/3.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/4.jpg"></li>
+
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/5.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/6.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/7.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/8.jpg"></li>
+
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/9.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/10.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/11.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/12.jpg"></li>
+
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/13.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/14.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/15.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/16.jpg"></li>
+
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/17.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/18.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/19.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/20.jpg"></li>
+
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/21.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/22.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/23.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/24.jpg"></li>
+
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/25.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/26.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/27.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/28.jpg"></li>
+
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/29.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/30.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/31.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/32.jpg"></li>
+
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/33.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/34.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/35.jpg"></li>
+      <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/36.jpg"></li>
+    </ul>
+    </div>
+    <h4 class="heading__medium">
+      Four out of 51,000 identified potential claimants of South Africa's R5-billion silicosis settlement.
+    </h4>
+  </div>
     <div class="content-wrapper">
       <p class="para">
         <span class="firstcharacter">B</span>uilding South Africa’s biggest class action
@@ -361,117 +314,113 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
 
   <script src="/assets/js/carousel-script.js"></script>
-  <script src="/assets/js/main-opacity-float-script.js"></script>
+  <script src="/assets/js/opacity-script.js"></script>
   <script src="/assets/js/two-step.js"></script>
 
   <script>
-    $(document).ready(function(){
-      var contentList = [
-        "Moses Mdluli sits on a cushion outside. His arms crossed around his chest. He holds on tightly and coughs a couple of times. \"It's especially bad in the winter,\" he says.",
-        "His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. \"When I see them in the mornings, I\'m alive.\", Mdluli shares.",
-        "The 55-year-old former mineworker from the twon Hlatikulu in Eswatini can\’t pace or walk more than 20 metres without wheezing. He often coughs up blood in the evenings.",
-        "Silicosis or Worker\'s lung, as it\'s commonly known, made him redundant as a worker 14 years ago. \"They don't want skorokoro,\” he says talking about the South African gold mines.",
-        "These days he can\'t lift a bucket of water. The Swati man started as a helper and eventually worked his way up to a line manager. \“As soon as they see you coughing they chase you away.\"",
-        "Mdluli only has one of his lungs left and wheezes when he trudges. \“The one is fucked up,\” he says angrily.",
-        "Close to Manzini in Eswatini lives Isaac Lukhele (75) who started working in South Africa\’s gold mines in 1962.",
-        "\“When I was retrenched from the mines in 2004, the doctors told me I will be compensated in Eswatini. But nothing has happened,\” Lukhele recalls.",
-        "He says that in 1962 he used to earn 25 cents a day. \“Treatment wasn\’t really good. We were not treated like human beings,\” he says. There used to be 50 people in one dormatory.",
-        "Today, Lukhele supports his family by farming with a handful of goats and chickens. He\'s saving money to build a shelter for his livestock and receives a monthly pension of R400 from government.",
-        "Dumisile Dlamini is from Hlathikhulu's occupational health service centre Eswatini. She explains that treatments are expensive and difficult to come by for struggling patients.",
-        "\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older.",
-        "Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“As you know men are leaders of the households.\” Dlamini says.",
-        "Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa."
-        ];
-      var stickyOuter = $('.stories .sticky-outer'),
-          floatingBox = $('.stories .floating-box');
-      var ts = new TwoStep({
-          elements: document.querySelectorAll('.stories .cd-section'),
-          stick: document.querySelector('.stories .sticky-outer'),
-          onChange: function(event) {
-            stickyOuter[0].style.position = "fixed";
-            // if(event.index > ts.elements.length) {
-            //   stickyOuter[0].style.position = "fixed";
-            // }
-          },
-          narrative: [
-              function(event) {
-                floatingBox.html("<p>" + contentList[0] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[1] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[2] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[3] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[4] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[5] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[6] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[7] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[8] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[9] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[10] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[11] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[12] + "</p>");
-              },
-              function(event) {
-                floatingBox.html("<p>" + contentList[13] + "</p>");
-              }
-          ],
-          offset: {
-            up: "-80%",
-            down: "80"
-          }
-      });
-
-      var contentList2 = [
-        "Dumisile Dlamini is from Hlathikhulu's occupational health service centre Eswatini. She explains that treatments are expensive and difficult to come by for struggling patients.",
-        "Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“As you know men are leaders of the households.\” Dlamini says.",
-        "Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa."
-        ];
-      var floatingBox2 = $('.lesotho-sories .floating-box');
-      var ts2 = new TwoStep({
-          elements: document.querySelectorAll('.lesotho-sories .cd-section'),
-          stick: document.querySelector('.lesotho-sories .sticky-outer'),
-          onChange: function(event) {
-            $('.lesotho-sories .sticky-outer')[0].style.position = "fixed";
-          },
-          narrative: [
-            function(event) {
-              floatingBox2.text(contentList2[0]);
-            },
-            function(event) {
-              floatingBox2.text(contentList2[1]);
-            },
-            function(event) {
-              floatingBox2.text(contentList2[2]);
-            }
-          ],
-          offset: {
-            up: '-80%',
-            down: '80%'
-          }
-      });
-    });
+    //$(document).ready(function(){});
+      // var contentList = [
+      //   "Moses Mdluli sits on a cushion outside. His arms crossed around his chest. He holds on tightly and coughs a couple of times. \"It's especially bad in the winter,\" he says.",
+      //   "His children sit on the porch and play a game of stone-toss-and-pick-up called kudoda. \"When I see them in the mornings, I\'m alive.\", Mdluli shares.",
+      //   "The 55-year-old former mineworker from the twon Hlatikulu in Eswatini can\’t pace or walk more than 20 metres without wheezing. He often coughs up blood in the evenings.",
+      //   "Silicosis or Worker\'s lung, as it\'s commonly known, made him redundant as a worker 14 years ago. \"They don't want skorokoro,\” he says talking about the South African gold mines.",
+      //   "These days he can\'t lift a bucket of water. The Swati man started as a helper and eventually worked his way up to a line manager. \“As soon as they see you coughing they chase you away.\"",
+      //   "Mdluli only has one of his lungs left and wheezes when he trudges. \“The one is fucked up,\” he says angrily.",
+      //   "Close to Manzini in Eswatini lives Isaac Lukhele (75) who started working in South Africa\’s gold mines in 1962.",
+      //   "\“When I was retrenched from the mines in 2004, the doctors told me I will be compensated in Eswatini. But nothing has happened,\” Lukhele recalls.",
+      //   "He says that in 1962 he used to earn 25 cents a day. \“Treatment wasn\’t really good. We were not treated like human beings,\” he says. There used to be 50 people in one dormatory.",
+      //   "Today, Lukhele supports his family by farming with a handful of goats and chickens. He\'s saving money to build a shelter for his livestock and receives a monthly pension of R400 from government.",
+      //   "Dumisile Dlamini is from Hlathikhulu's occupational health service centre Eswatini. She explains that treatments are expensive and difficult to come by for struggling patients.",
+      //   "\“In Eswatini you’ll find that many of the patients are difficult to reach,\” explains Dlamini. \“Many of them are older.",
+      //   "Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“As you know men are leaders of the households.\” Dlamini says.",
+      //   "Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa."
+      //   ];
+      // var stickyOuter = $('.stories .sticky-outer'),
+      //     floatingBox = $('.stories .floating-box');
+      // var ts = new TwoStep({
+      //     elements: document.querySelectorAll('.stories .cd-section'),
+      //     stick: document.querySelector('.stories .sticky-outer'),
+      //     onChange: function(event) {
+      //       stickyOuter[0].style.position = "fixed";
+      //     },
+      //     narrative: [
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[0] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[1] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[2] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[3] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[4] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[5] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[6] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[7] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[8] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[9] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[10] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[11] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[12] + "</p>");
+      //         },
+      //         function(event) {
+      //           floatingBox.html("<p>" + contentList[13] + "</p>");
+      //         }
+      //     ],
+      //     offset: {
+      //       up: "-80%",
+      //       down: "80"
+      //     }
+      // });
+      //
+      // var contentList2 = [
+      //   "Dumisile Dlamini is from Hlathikhulu's occupational health service centre Eswatini. She explains that treatments are expensive and difficult to come by for struggling patients.",
+      //   "Tuberculosis is very common among those who\’ve contracted silicosis and can contaminate close friends and family. \“As you know men are leaders of the households.\” Dlamini says.",
+      //   "Mdluli and Lukhele are part of tens of thousands former mine workers. Of those surviving today, many are sickly and live in remote, rural areas across Southern Africa."
+      //   ];
+      // var floatingBox2 = $('.lesotho-sories .floating-box');
+      // var ts2 = new TwoStep({
+      //     elements: document.querySelectorAll('.lesotho-sories .cd-section'),
+      //     stick: document.querySelector('.lesotho-sories .sticky-outer'),
+      //     onChange: function(event) {
+      //       $('.lesotho-sories .sticky-outer')[0].style.position = "fixed";
+      //     },
+      //     narrative: [
+      //       function(event) {
+      //         floatingBox2.text(contentList2[0]);
+      //       },
+      //       function(event) {
+      //         floatingBox2.text(contentList2[1]);
+      //       },
+      //       function(event) {
+      //         floatingBox2.text(contentList2[2]);
+      //       }
+      //     ],
+      //     offset: {
+      //       up: '-80%',
+      //       down: '80%'
+      //     }
+      // });
 
 
     //Issue Keep section two after scroll | Keep scroll state
@@ -485,7 +434,7 @@
           currentSlideHeight = $(this).closest(".landing").height();
       page.animate({
   		  scrollTop: page.scrollTop() + currentSlideHeight,
-  	  }, 100);
+  	  }, 500);
   	  event.preventDefault();
     });
 
