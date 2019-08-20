@@ -1,6 +1,10 @@
 .narrative {
   background-color: $dark_desaturated_blue;
+  height: 100%;
   position: relative;
+  @media only screen and (min-width: 768px) {
+    height: 100vh;
+  }
   &__item {
     background-position: center center;
     background-repeat: no-repeat;
@@ -26,7 +30,7 @@
   &__content {
     background-color: $dark_desaturated_blue;
     @media only screen and (min-width: 768px)  {
-      //height: 100vh;
+      height: 100vh;
     }
   }
   &__video {
