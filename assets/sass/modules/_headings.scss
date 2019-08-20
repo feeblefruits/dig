@@ -21,15 +21,19 @@
       display: inline;
     }
   }
-  &__micro {
-    color: #fff;
-    text-transform: uppercase;
+  &__secondary {
+    font-size: 40px;
+    padding: 0 0 1em;
   }
   &__medium {
     display: block;
     font-size: 22px;
     padding: 0 28%;
     text-align: center;
+  }
+  &__micro {
+    color: #fff;
+    text-transform: uppercase;
   }
   &__subtitle {
     color: #fff;
@@ -44,11 +48,6 @@
   &__caption {
     font-size: 18px;
   }
-  &__secondary {
-    font-size: 55px;
-    padding: 0 0 1em;
-  }
-
   &--shadow {
     background: rgba(0,0,0,0.3);
     display: inline-block;

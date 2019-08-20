@@ -1,0 +1,12 @@
+.map-wrapper {
+  background: #fff;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  iframe {
+    background: #fff;
+    border-radius: 10px;
+    width: 95%;
+  }
+}
