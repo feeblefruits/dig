@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+
 	//Variables
 	var hijacking= $('.narrative').data('hijacking'),
 		animationType = $('.narrative').data('animation'),
@@ -6,6 +7,7 @@ jQuery(document).ready(function($){
     scrollThreshold = 5,
     actual = 1,
     animating = false;
+
 
   //DOM Elements
   var sectionsAvailable = $('.narrative__item'),
@@ -80,10 +82,15 @@ jQuery(document).ready(function($){
 			//WILD CHILDREN .children('div') => .children('.narrative__content')DIV SELECTOR
 			transformSection(actualBlock.children('.narrative__content'), animationValues[0], animationValues[1], animationValues[2], animationValues[3], animationValues[4]);
 			( offset >= 0 && offset < windowHeight ) ? actualBlock.addClass('visible') : actualBlock.removeClass('visible');
+				console.log(actualBlock.children('.narrative__content'));
 		});
 
 		checkNavigation();
+
+
 	}
+
+
 
 	function transformSection(element, translateY, scaleValue, rotateXValue, opacityValue, boxShadow) {
 		//Transform sections - normal scroll

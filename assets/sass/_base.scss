@@ -1,12 +1,11 @@
 html {
   background-color: #000;
-  font-family: "Open Sans", sans-serif;
   height: 100%;
 }
 
 html, body {
-  background-color: #081118;
-  font-family: 'Lato', sans-serif;
+  background-color: #000;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   margin: 0 auto;
@@ -30,7 +29,16 @@ img {
   width: 100%;
 }
 
-.para {
+p {
   font-size: 18px;
   color: #000;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+  @media only screen and (min-width: 768px)  {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
 }
