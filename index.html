@@ -99,7 +99,7 @@
 
   <section class="main-writing-section">
     <div class="carousel">
-    <div class="carousel__container">
+      <div class="carousel__container">
       <ul id="id-carousel" class='carousel__list'>
       <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/1.jpg"></li>
       <li class="carousel__item"><img class="carousel__image" src="/assets/images/id-faces/2.jpg"></li>
@@ -429,6 +429,7 @@
     $(function() {
       windowResize();
     });
+
     $(".scroll-cta").on("click",".scroll-cta__link", function(event) {
       var $this = $(this),
           currentSlideHeight = $(this).closest(".landing").height();
@@ -436,6 +437,8 @@
   		  scrollTop: page.scrollTop() + currentSlideHeight,
   	  }, 500);
   	  event.preventDefault();
+      
+      console.log(currentSlideHeight);
     });
 
     function windowResize() {
