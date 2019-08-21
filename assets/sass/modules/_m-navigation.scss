@@ -45,27 +45,22 @@
   }
 }
 
-nav#dot-nav {
+#dot-nav {
   position: fixed;
-  right: 30px;
+  right: 5px;
   z-index: 999;
   a {
-    border: 1px solid #121212;
+    border: 1px solid $light_grayish_blue;
     border-radius: 50%;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     display: block;
     margin: 10px;
     -webkit-transition: all 0.4;
     transition: all 0.4;
     &.active {
-      background: #121212;
-    }
-  }
-  &.red a {
-    border: 1px solid #db2853;
-    &:first-child {
-      background: #db2853;
+      border: 1px solid $vivid_red;
+      background: $vivid_red;
     }
   }
 }

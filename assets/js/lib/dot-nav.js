@@ -72,7 +72,7 @@ const dotNav = (elem, easing) => {
   let allVis = document.getElementsByClassName('in-viewport'),
       allDots;
   for (let i = 0; i < allSecs.length; i++) {
-      allSecs[i].classList.add('section-' + i);
+    allSecs[i].classList.add('section-' + i);
   }
 
   //  Add the dots
@@ -113,7 +113,6 @@ const dotNav = (elem, easing) => {
   const scrollMe = (e) => {
     let anchor = e.currentTarget.dataset.sec;
     scrollIt(document.querySelector('.section-' + anchor), scrollSpeed, easing);
-    console.log();
     e.preventDefault(document.querySelector('.section-' + anchor));
   }
 

@@ -22,6 +22,9 @@
   </header>
   <div id="fullpage">
     <nav id="dot-nav"></nav>
+    <div  class="scroll-cta">
+      <a href="#" class="scroll-cta__link">Scroll</a>
+    </div>
   	<section class="section landing">
   		<div class="landing__intro">
         <div class="landing__inner">
@@ -30,10 +33,6 @@
             <span class="heading__hero_char">biggest lawsuit</span>
     			</h1>
         </div>
-  		</div>
-
-  		<div  class="scroll-cta">
-  			<a href="#" class="scroll-cta__link">Scroll</a>
   		</div>
   	</section>
     <section class="section story">
@@ -52,10 +51,6 @@
           Africa's biggest class action lawsuit and ultimately compensate those affected.
         </p>
       </div>
-
-      <div class="scroll-cta">
-  			<a href="#" class="scroll-cta__link">Scroll</a>
-  		</div>
     </section>
     <section class="section narrative">
       <!-- {Comment}
@@ -97,8 +92,6 @@
           </video>
         </div>
       </div>
-
-
     </section>
     <section class="section claimants">
       <div class="claimants__content">
@@ -288,6 +281,9 @@
           Trust do not have a turn around time for payment."
         </p>
       </div>
+      <div  class="scroll-cta">
+        <a href="#" class="scroll-cta__link">Scroll</a>
+      </div>
     </section>
     <section class="section narrative narrative--lesotho">
       <div class="narrative__item">
@@ -299,21 +295,10 @@
       <div class="narrative__item">
         <div class="narrative__content"></div>
       </div>
-      <nav class="navigation">
-        <ul class="navigation-list">
-          <li class="navigation-list__item">
-            <a href="#0" class="navigation-list__anchor navigation-list__prev inactive">Next</a>
-          </li>
-          <li class="navigation-list__item">
-            <a href="#0" class="navigation-list__anchor navigation-list__next">Prev</a>
-          </li>
-        </ul>
-      </nav>
     </section>
   </div>
 
   <script src="/assets/js/lib/dot-nav.js"></script>
-
   <script src="/assets/js/lib/jquery-2.1.4.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fixto/0.5.0/fixto.min.js"></script>
@@ -321,5 +306,30 @@
 
   <script src="/assets/js/carousel-script.js"></script>
   <script src="/assets/js/two-step.js"></script>
+  <script>
+    var page = $('html, body'),
+        currentSection = $('.section'),
+        viewportHeight = $(window).innerHeight();
+      $(".scroll-cta").on("click",".scroll-cta__link", function(event) {
+        var $this = $(this);
+        for(var i = 0; i < currentSection.length; i++) {
+          var viewportOffset = currentSection[i].getBoundingClientRect(),
+              elemTop = viewportOffset.top;
+            if(elemTop < viewportHeight) {
+              var currentSlideNext = $(currentSection[i]).closest("section").height();
+              page.animate({
+                scrollTop: page.scrollTop() + currentSlideNext,
+              }, 800);
+            }
+        }
+        event.preventDefault();
+      });
+
+    $(function() {
+      $(window).on('resize', function() {
+        viewportHeight = $(window).height();
+      });
+    });
+  </script>
 </body>
 </html>
