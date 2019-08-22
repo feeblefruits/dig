@@ -68,7 +68,7 @@ const dotNav = (elem, easing) => {
   //  Dot nav
   const allSecs = document.getElementsByClassName(elem);
   const nav = document.getElementById('dot-nav');
-  const scrollSpeed = '1000';
+  const scrollSpeed = '200';
   let allVis = document.getElementsByClassName('in-viewport'),
       allDots;
   for (let i = 0; i < allSecs.length; i++) {

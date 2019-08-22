@@ -313,22 +313,28 @@
             var sectionClassArray = $(sections[i]).attr("class").split(/\s+/).slice(-1)[0],
                 viewportOffset = sections[i].getBoundingClientRect(),
                 elemTop = viewportOffset.top;
+
             if(elemTop < viewportHeight && elemTop > -1 ) {
               var nextSectionNum = $(sections[i]).next().attr("class").split(/\s+/).slice(-1)[0].split(/\s*\-\s*/g)[1];
-              $(window).bind('load scroll', function() {
+              $(window).on('load scroll', function() {
                 $("#scrolling").attr('data-sec', nextSectionNum);
               });
+
+              $("#scrolling").on('click', function(event) {
+                var anchor = $(this).attr('data-sec'),
+                    nextSection = $('.section-' + anchor);//document.querySelector('.section-' + anchor)
+                    console.log(viewportOffset, nextSection.offset().top);
+                    page.animate({
+                      scrollTop: page.scrollTop() + nextSection.offset().top,
+                    }, 800,'swing',function() {});
+                event.preventDefault();
+              });
+
             }
           }
 
-          $("#scrolling").on('click', function(event) {
-            var anchor = $(this).attr('data-sec'),
-                nextSection = $('.section-' + anchor);//document.querySelector('.section-' + anchor)
-                page.animate({
-                  scrollTop: nextSection.offset().top,
-                }, 800);
-            event.preventDefault();
-          });
+
+
 
 
 
