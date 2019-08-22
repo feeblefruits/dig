@@ -1,0 +1,43 @@
+.horizontal-bar-chart-container {
+  overflow: auto;
+  @media only screen and (min-width: 768px)  {
+    padding: 0 20%;
+  }
+  iframe {
+    @media only screen and (min-width: 768px) {
+      height: 1080px;
+    }
+  }
+}
+
+.bar {
+  fill: $vivid_red;
+  :hover {
+    fill: $orange;
+  }
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: $light_grayish_blue;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+.x path {
+  display: none;
+}
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid $dark_magenta;
+  padding: 14px;
+  text-align: center;
+}
+
+.y-axis {
+  font-size: 14px;
+}

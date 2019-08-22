@@ -1,0 +1,22 @@
+.map-wrapper {
+  background: #fff;
+  height: 100%;
+  text-align: center;
+  @media only screen and (min-width: 768px)  {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  iframe {
+    background: #fff;
+    border-radius: 10px;
+    height: 90%;
+    width: 95%;
+    @media only screen and (min-width: 768px)  {
+      max-width: 95vw;
+      max-height: 90vh;
+    }
+  }
+}
