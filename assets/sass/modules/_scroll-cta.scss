@@ -4,6 +4,8 @@
   margin: 0 auto;
   text-align: center;
   width: 15%;
+  display: block;
+  z-index: 999;
   @media only screen and (min-width: 360px) {
     position: fixed;
     bottom: 0;

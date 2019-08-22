@@ -112,6 +112,7 @@ const dotNav = (elem, easing) => {
   //  Click stuff
   const scrollMe = (e) => {
     let anchor = e.currentTarget.dataset.sec;
+    console.log(anchor);
     scrollIt(document.querySelector('.section-' + anchor), scrollSpeed, easing);
     e.preventDefault(document.querySelector('.section-' + anchor));
   }
@@ -120,6 +121,11 @@ const dotNav = (elem, easing) => {
   for (let i = 0; i < allDots.length; i++) {
     allDots[i].addEventListener('click', scrollMe);
   }
+
+
+  //scrollCta.addEventListener('click',scrollIt(document.querySelector('.section-' + anchor), scrollSpeed, easing));
+
+
 }
 
 dotNav('section', 'linear');
