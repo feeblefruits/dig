@@ -1,6 +1,6 @@
 //  Dot Nav Script
 const dotNav = (elem, easing) => {
-  function scrollIt(destination, duration = 200, easing = 'linear', callback) {
+  function scrollIt(destination, duration = 10, easing = 'linear', callback) {
     const easings = {
       linear(t) { return t; },
       easeInQuad(t) { return t * t; },
@@ -68,7 +68,7 @@ const dotNav = (elem, easing) => {
   //  Dot nav
   const allSecs = document.getElementsByClassName(elem);
   const nav = document.getElementById('dot-nav');
-  const scrollSpeed = '200';
+  const scrollSpeed = 10;
   let allVis = document.getElementsByClassName('in-viewport'),
       allDots;
   for (let i = 0; i < allSecs.length; i++) {
