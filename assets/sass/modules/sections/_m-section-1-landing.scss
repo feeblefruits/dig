@@ -1,5 +1,4 @@
 .landing {
-  //background: url("/assets/images/0-hlatijhulu-landscape.jpg") no-repeat 0 0/cover;
   color: #fff;
   margin: 0 auto;
   text-align: center;
@@ -14,6 +13,7 @@
     left: 0;
     right: 0;
     overflow: auto;
+    width: 100%;
   }
   &__intro {
     margin: 0 auto;

@@ -22,7 +22,9 @@
   </header>
   <div id="fullpage">
     <nav id="dot-nav"></nav>
-
+    <a id="scrolling" class="scroll-cta" data-sec>
+      <span class="scroll-cta__link">Scroll</span>
+    </a>
   	<section class="section landing">
       <video id="landing_video" class="landing__video" autoplay="" loop="" muted="" preload="" poster="/assets/images/0-hlatijhulu-landscape.jpg">
         <source src="/assets/media/TreePan.mp4" type="video/mp4">
@@ -311,7 +313,6 @@
       var page = $('html, body'),
           viewportHeight = $(window).height(),
           sections = $('.section');
-          sections.append('<a id="scrolling" class="scroll-cta" data-sec><span class="scroll-cta__link">Scroll</span></a>');
 
       for(var i = 0; i < sections.length; i++) {
         var sectionClassArray = $(sections[i]).attr("class").split(/\s+/).slice(-1)[0],
