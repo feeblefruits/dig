@@ -42,4 +42,9 @@
       width: 45px;
     }
   }
+  &:hover,&:active, &:focus {
+    &:after {
+      animation: none;
+    }
+  }
 }

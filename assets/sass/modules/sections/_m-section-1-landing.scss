@@ -6,9 +6,7 @@
   height: 100%;
   min-height: 100vh; //If Content is less than viewport else
   position: relative;
-  @media only screen and (min-width: 1350px)  {
-    //background-position: 0 -15em;
-  }
+
   &__video {
     position: absolute;
     left: 0;
