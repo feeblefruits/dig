@@ -52,9 +52,9 @@
         </p>
       </div>
     </section>
-    <section class="section narrative">
+    <!-- <section class="section narrative">
       <iframe loading="lazy" src="https://feeblefruits.github.io/eswatini_index.html" style="border:none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-    </section>
+    </section> -->
     <section class="section claimants">
       <div class="claimants__content">
         <p class="para">
@@ -77,9 +77,9 @@
           “We needed to find clients for the class action,” says George Kahn from Richard Spoor. The legal team then had to build a database — one that could locate, verify and, ultimately, help to compensate the miners and their families.
         </p>
       </div>
-      <div class="map-wrapper">
+      <!-- <div class="map-wrapper">
         <iframe loading="lazy" src="https://feeblefruits.github.io/scrolly-map-index.html" style="border:none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-      </div>
+      </div> -->
       <div class="claimants__content">
         <p class="para">
           Kahn says that it’s a common tactic in the legal industry for corporate attorneys to overwhelm small legal firms with information. These days, however, with advances in technology, firms are able to analyse and make sense of physical, unstructured information much faster and more accurately.
@@ -112,9 +112,9 @@
           Kahn adds that: “It would’ve cost us a small fortune to employ an army of paralegals, who would’ve taken years to produce the same results manually.”
         </p>
       </div>
-      <div class="horizontal-bar-chart-container">
+      <!-- <div class="horizontal-bar-chart-container">
         <iframe loading="lazy" src="https://feeblefruits.github.io/horizontal-bar-chart.html" style="border: 0;" name="https://feeblefruits.github.io/horizontal-bar-chart" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="150%" width="100%" allowfullscreen></iframe>
-      </div>
+      </div> -->
       <div class="claimants__content">
         <p class="para">
           “By having machines that can do that en masse, it’s very easy to quickly work out who can and who can’t qualify [for compensation] just based on service records,” Gliddon says. “The more data the model gets the smarter it gets.”
@@ -128,9 +128,9 @@
       </div>
     </section>
 
-    <section class="section narrative">
+    <!-- <section class="section narrative">
       <iframe loading="lazy" src="https://feeblefruits.github.io/lesotho_index.html" style="border:none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-    </section>
+    </section> -->
     <section class="section claimants">
       <div class="claimants__content">
         <p class="para">
@@ -151,16 +151,11 @@
 
   <script src="/assets/js/lib/dot-nav.js"></script>
   <script src="/assets/js/lib/jquery-2.1.4.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fixto/0.5.0/fixto.min.js"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
 
-  <script src="/assets/js/carousel-script.js"></script>
-  <script src="/assets/js/two-step.js"></script>
   <script>
     "use strict";
     $(function() {
-      //document.getElementById('landing_video').playbackRate = 1.25;
+
       var page = $('html, body'),
           viewportHeight = $(window).height(),
           sections = $('.section');
@@ -170,18 +165,32 @@
             viewportOffset = sections[i].getBoundingClientRect(),
             elemTop = viewportOffset.top;
 
-        if(elemTop < viewportHeight && elemTop > -1 ) {
-          var nextSectionNum = $(sections[i]).next().attr("class").split(/\s+/).slice(-1)[0].split(/\s*\-\s*/g)[1];
+
+        if(elemTop < viewportHeight && elemTop > -1 ) { //Not Live Updating
+          var nextSectionNum = $(sections[i]).next().attr("class").split(/\s+/).slice(-1)[0].split(/\s*\-\s*/g)[1]; //Not Live Updating
+
+          $('.dots').on('click',function() {
+            var $this = $(this).parent().next();
+            $this.fadeOut('fast', function(){
+              $this.delay(1500).fadeIn('slow');
+            });
+          });
           $(window).on('load scroll', function() {
+            console.log(nextSectionNum);
             $("#scrolling").attr('data-sec', nextSectionNum);
           });
 
           $("#scrolling").on('click', function(event) {
-            var anchor = $(this).attr('data-sec'),
-                nextSection = $('.section-' + anchor);//document.querySelector('.section-' + anchor)
+            var $this = $(this),
+                anchor = $this.attr('data-sec'),
+                nextSection = $('.section-' + anchor);
                 page.animate({
                   scrollTop: page.scrollTop() + nextSection.offset().top,
                 }, 800,'linear',function() {});
+                console.log(nextSection.next());
+                $this.fadeOut('fast', function(){
+                  $this.delay(1500).fadeIn('slow');
+                });
             event.preventDefault();
           });
         }
