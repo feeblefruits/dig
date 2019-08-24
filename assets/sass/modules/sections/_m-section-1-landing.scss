@@ -1,5 +1,5 @@
 .landing {
-  background: url('/assets/images/moses_mdluli-bg2.jpg')no-repeat center center /cover;
+  background: url('/assets/images/moses_mdluli-bg2.jpg')no-repeat center bottom /cover;
   color: #fff;
   margin: 0 auto;
   text-align: center;
@@ -7,7 +7,7 @@
   min-height: 100vh; //If Content is less than viewport else
   position: relative;
   @media only screen and (min-width: 1350px)  {
-    background-position: 0 -15em;
+    //background-position: 0 -15em;
   }
   &__video {
     position: absolute;
