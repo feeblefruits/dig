@@ -43,8 +43,8 @@
     }
   }
   &:hover,&:active, &:focus {
-    &:after {
-      animation: none;
+    .scroll-cta__link:after {
+      animation: 0;
     }
   }
 }
