@@ -22,10 +22,13 @@
   </header>
   <div id="fullpage">
     <nav id="dot-nav"></nav>
-    <div  class="scroll-cta">
-      <a href="#" class="scroll-cta__link">Scroll</a>
-    </div>
+    <a id="scrolling" class="scroll-cta" data-sec>
+      <span class="scroll-cta__link">Scroll</span>
+    </a>
   	<section class="section landing">
+      <video id="landing_video" class="landing__video" autoplay="" loop="" muted="" preload="" poster="/assets/images/0-hlatijhulu-landscape.jpg">
+        <source src="/assets/media/TreePan.mp4" type="video/mp4">
+      </video>
   		<div class="landing__intro">
         <div class="landing__inner">
     			<h1 class="heading__hero">
@@ -281,9 +284,6 @@
           Trust do not have a turn around time for payment."
         </p>
       </div>
-      <div  class="scroll-cta">
-        <a href="#" class="scroll-cta__link">Scroll</a>
-      </div>
     </section>
     <section class="section narrative narrative--lesotho">
       <div class="narrative__item">
@@ -307,28 +307,34 @@
   <script src="/assets/js/carousel-script.js"></script>
   <script src="/assets/js/two-step.js"></script>
   <script>
-    var page = $('html, body'),
-        currentSection = $('.section'),
-        viewportHeight = $(window).innerHeight();
-      $(".scroll-cta").on("click",".scroll-cta__link", function(event) {
-        var $this = $(this);
-        for(var i = 0; i < currentSection.length; i++) {
-          var viewportOffset = currentSection[i].getBoundingClientRect(),
-              elemTop = viewportOffset.top;
-            if(elemTop < viewportHeight) {
-              var currentSlideNext = $(currentSection[i]).closest("section").height();
-              page.animate({
-                scrollTop: page.scrollTop() + currentSlideNext,
-              }, 800);
-            }
-        }
-        event.preventDefault();
-      });
-
+    "use strict";
     $(function() {
-      $(window).on('resize', function() {
-        viewportHeight = $(window).height();
-      });
+      //document.getElementById('landing_video').playbackRate = 1.25;
+      var page = $('html, body'),
+          viewportHeight = $(window).height(),
+          sections = $('.section');
+
+      for(var i = 0; i < sections.length; i++) {
+        var sectionClassArray = $(sections[i]).attr("class").split(/\s+/).slice(-1)[0],
+            viewportOffset = sections[i].getBoundingClientRect(),
+            elemTop = viewportOffset.top;
+
+        if(elemTop < viewportHeight && elemTop > -1 ) {
+          var nextSectionNum = $(sections[i]).next().attr("class").split(/\s+/).slice(-1)[0].split(/\s*\-\s*/g)[1];
+          $(window).on('load scroll', function() {
+            $("#scrolling").attr('data-sec', nextSectionNum);
+          });
+
+          $("#scrolling").on('click', function(event) {
+            var anchor = $(this).attr('data-sec'),
+                nextSection = $('.section-' + anchor);//document.querySelector('.section-' + anchor)
+                page.animate({
+                  scrollTop: page.scrollTop() + nextSection.offset().top,
+                }, 800,'linear',function() {});
+            event.preventDefault();
+          });
+        }
+      }
     });
   </script>
 </body>
