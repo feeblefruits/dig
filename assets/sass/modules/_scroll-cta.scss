@@ -9,41 +9,25 @@
   @media only screen and (min-width: 360px) {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 15%;
   }
-  &:before {
+  &:after {
+    animation: bounce 2s infinite ease-in-out;
+    background-image: url("/assets/images/icons/arrow-down.png");
+    background-position: 0 20px;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-clip: content-box;
+    color: $vivid_red;
     content: "";
-    border-top: 4px solid $vivid_red;
     display: block;
-    width: 12%;
-    text-align: center;
     margin: 0 auto;
-  }
-  &__link {
-    color: #fff;
-    font-size: 13px;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    &:after {
-      animation: bounce 2s infinite ease-in-out;
-      background-image: url("/assets/images/icons/arrow-down.png");
-      background-position: 0 20px;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-clip: content-box;
-      color: #fff;
-      content: "";
-      display: block;
-      margin: 0 auto;
-      padding: 1em 0;
-      height: 35px;
-      width: 45px;
-    }
+    padding: 1em 0;
+    height: 30px;
+    width: 40px;
   }
   &:hover,&:active, &:focus {
-    .scroll-cta__link:after {
+    &:after {
       animation: 0;
     }
   }
