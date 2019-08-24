@@ -1,6 +1,6 @@
 //  Dot Nav Script
 const dotNav = (elem, easing) => {
-  function scrollIt(destination, duration = 200, easing = 'linear', callback) {
+  function scrollIt(destination, duration = 10, easing = 'linear', callback) {
     const easings = {
       linear(t) { return t; },
       easeInQuad(t) { return t * t; },
@@ -68,7 +68,7 @@ const dotNav = (elem, easing) => {
   //  Dot nav
   const allSecs = document.getElementsByClassName(elem);
   const nav = document.getElementById('dot-nav');
-  const scrollSpeed = '1000';
+  const scrollSpeed = 10;
   let allVis = document.getElementsByClassName('in-viewport'),
       allDots;
   for (let i = 0; i < allSecs.length; i++) {
@@ -112,6 +112,7 @@ const dotNav = (elem, easing) => {
   //  Click stuff
   const scrollMe = (e) => {
     let anchor = e.currentTarget.dataset.sec;
+    console.log(anchor);
     scrollIt(document.querySelector('.section-' + anchor), scrollSpeed, easing);
     e.preventDefault(document.querySelector('.section-' + anchor));
   }
@@ -120,6 +121,11 @@ const dotNav = (elem, easing) => {
   for (let i = 0; i < allDots.length; i++) {
     allDots[i].addEventListener('click', scrollMe);
   }
+
+
+  //scrollCta.addEventListener('click',scrollIt(document.querySelector('.section-' + anchor), scrollSpeed, easing));
+
+
 }
 
 dotNav('section', 'linear');

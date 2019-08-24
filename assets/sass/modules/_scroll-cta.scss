@@ -4,6 +4,8 @@
   margin: 0 auto;
   text-align: center;
   width: 15%;
+  display: block;
+  z-index: 999;
   @media only screen and (min-width: 360px) {
     position: fixed;
     bottom: 0;
@@ -27,7 +29,7 @@
     &:after {
       animation: bounce 2s infinite ease-in-out;
       background-image: url("/assets/images/icons/arrow-down.png");
-      background-position: 0 -20px;
+      background-position: 0 20px;
       background-repeat: no-repeat;
       background-size: 100%;
       background-clip: content-box;
