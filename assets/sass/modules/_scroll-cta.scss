@@ -12,7 +12,6 @@
     left: 15%;
   }
   &:after {
-    animation: bounce 2s infinite ease-in-out;
     background-image: url("/assets/images/icons/arrow-down.png");
     background-position: 0 20px;
     background-repeat: no-repeat;
@@ -30,5 +29,17 @@
     &:after {
       animation: 0;
     }
+  }
+}
+
+.animate {
+  @media only screen and (min-width: 360px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &:after {
+    animation: bounce 2s infinite ease-in-out;
   }
 }

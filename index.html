@@ -155,28 +155,36 @@
     $(function() {
 
       var page = $('html, body'),
-          viewportHeight = $(window).height(),
-          sections = $('.section');
+          scrollNav = $("#scrolling"),
+          sections = $('.section'),
+          viewportHeight = $(window).height();
+          
       for(var i = 0; i < sections.length; i++) {
         var sectionClassArray = $(sections[i]).attr("class").split(/\s+/).slice(-1)[0],
             viewportOffset = sections[i].getBoundingClientRect(),
             elemTop = viewportOffset.top;
-        if(elemTop < viewportHeight && elemTop > -1 ) { //Not Live Updating
+
+        //Not Live Updating
+        if(elemTop < viewportHeight && elemTop > -1 ) {
           var nextSectionNum = $(sections[i]).next().attr("class").split(/\s+/).slice(-1)[0].split(/\s*\-\s*/g)[1]; //Not Live Updating
-
-
+          if($(sections[i]).prev('.section').length === 0) {
+            scrollNav.removeClass('animate').addClass('animate');
+            console.log($(sections[i]).prev('.section').length);
+          } else {
+            scrollNav.removeClass('animate');
+          }
           $('.dots').on('click',function() {
             var $this = $(this).parent().next();
             $this.fadeOut('fast', function(){
               $this.delay(1500).fadeIn('slow');
             });
           });
-          $(window).on('load scroll', function() {
 
-            $("#scrolling").attr('data-sec', nextSectionNum);
+          $(window).on('load scroll', function() {
+            scrollNav.attr('data-sec', nextSectionNum);
           });
 
-          $("#scrolling").on('click', function(event) {
+          scrollNav.on('click', function(event) {
             var $this = $(this),
                 anchor = $this.attr('data-sec'),
                 nextSection = $('.section-' + anchor);
