@@ -5,6 +5,7 @@
   height: 100%;
   min-height: 100vh; //If Content is less than viewport else
   position: relative;
+  overflow: hidden;
   &:before {
     animation: zoominout 50s infinite ease-in-out;
     background: url('/assets/images/moses_mdluli-bg2.jpg')no-repeat center bottom /cover;
