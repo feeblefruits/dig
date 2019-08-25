@@ -3,7 +3,7 @@
   overflow: auto;
   .blurb {
     background: $vivid_red;
-    background-image: -webkit-linear-gradient(30deg, #fff 50%, $vivid_red 50%);
+    background-image: -webkit-linear-gradient(30deg, $vivid_red 50%, #fff 50%);
     padding: 5%;
     font-style: italic;
     display: flex;
