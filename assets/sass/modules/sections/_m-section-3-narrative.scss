@@ -1,9 +1,9 @@
 .narrative {
   background-color: $dark_desaturated_blue;
-  height: 100%;
   position: relative;
-  @media only screen and (min-width: 768px) {
-    height: 100vh;
+  iframe {
+    min-height: 100vh;
+    height: 100%;
   }
   &__item {
     background-position: center center;

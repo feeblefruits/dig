@@ -2,17 +2,17 @@
   background-color: #fff;
   height: 100%;
   position: relative;
-  @media only screen and (min-width: 768px) {
-    height: 100vh;
-  }
   @media only screen and (min-width: 768px)  {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: flex-end;
   }
+  @media only screen and (min-width: 1350px) {
+    height: 100vh;
+  }
   &__inner {
-    padding: 2em 5%;
+    padding: 15% 5%;
     @media only screen and (min-width: 768px)  {
       padding: 0 25%;
     }
