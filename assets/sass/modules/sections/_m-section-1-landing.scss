@@ -1,11 +1,19 @@
 .landing {
-  background: url('/assets/images/moses_mdluli-bg2.jpg')no-repeat center bottom /cover;
   color: #fff;
   margin: 0 auto;
   text-align: center;
   height: 100%;
   min-height: 100vh; //If Content is less than viewport else
   position: relative;
+  &:before {
+    animation: zoominout 50s infinite ease-in-out;
+    background: url('/assets/images/moses_mdluli-bg2.jpg')no-repeat center bottom /cover;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
 
   &__video {
     position: absolute;
