@@ -25,8 +25,8 @@
     &--secondary {
       font-family: 'Crimson Text', serif;
       font-weight: normal;
-      font-size: 25px;
-      @media only screen and (min-width: 1311px) {
+      font-size: 23px;
+      @media only screen and (min-width: 768px) {
         font-size: 38px;
       }
     }

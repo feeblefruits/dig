@@ -1,7 +1,9 @@
 .horizontal-bar-chart-container {
   overflow: auto;
+  visibility: hidden;
   @media only screen and (min-width: 768px)  {
     padding: 0 20%;
+    visibility: visible;
   }
   &:after {
     background: url('/assets/images/horizontal-bar-chart_image.jpg') no-repeat center center/contain;
