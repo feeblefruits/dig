@@ -9,6 +9,7 @@
     background: url('/assets/images/horizontal-bar-chart_image.jpg') no-repeat center center/contain;
     content: "";
     display: block;
+    visibility: visible;
     width: 90%;
     height: 450px;
     @media only screen and (min-width: 768px) {
