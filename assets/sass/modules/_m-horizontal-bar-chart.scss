@@ -1,7 +1,9 @@
 .horizontal-bar-chart-container {
   overflow: auto;
+  visibility: hidden;
   @media only screen and (min-width: 768px)  {
     padding: 0 20%;
+    visibility: visible;
   }
   iframe {
     @media only screen and (min-width: 768px) {
