@@ -13,9 +13,11 @@
     background: #fff;
     border-radius: 10px;
     height: 90%;
-    width: 95%;
+    width: 88%;
+    margin: 0 auto;
+    border-radius: 5px;
     @media only screen and (min-width: 768px)  {
-      max-width: 95vw;
+      //max-width: 95vw;
       max-height: 90vh;
     }
   }
