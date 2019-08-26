@@ -5,8 +5,24 @@
     padding: 0 20%;
     visibility: visible;
   }
-  iframe {
+  &:after {
+    background: url('/assets/images/horizontal-bar-chart_image.jpg') no-repeat center center/contain;
+    content: "";
+    display: block;
+    width: 90%;
+    height: 450px;
     @media only screen and (min-width: 768px) {
+      display: none;
+      visibility: hidden;
+      background: none;
+    }
+  }
+  iframe {
+    display: none;
+    visibility: hidden;
+    @media only screen and (min-width: 768px) {
+      display: block;
+      visibility: visible;
       height: 1080px;
     }
   }
