@@ -14,10 +14,13 @@
       color: $dark_desaturated_blue;
       font-family: georgia, times,serif;
       padding: 3em 5%;
-      width: 45%;
+      width: 90%;
       -webkit-box-shadow: 0px 0px 25px -15px rgba(0,0,0,0.75);
       -moz-box-shadow: 0px 0px 25px -15px rgba(0,0,0,0.75);
       box-shadow: 0px 0px 25px -15px rgba(0,0,0,0.75);
+      @media only screen and (min-width: 768px)  {
+        width: 45%;
+        }
       p {
         color: #999;
         margin: 0 0 10px;
