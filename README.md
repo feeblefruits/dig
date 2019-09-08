@@ -1,9 +1,7 @@
 PROJECT DIG
 =========================
 The project is a data visual storytelling microsite for the Mail & Guardian.
-The live site can be found 
-
-[here](https://silicosis.mg.co.za).
+The live site can be found [here](https://silicosis.mg.co.za).
 
 Motivation
 -----------------
