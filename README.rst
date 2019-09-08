@@ -12,7 +12,7 @@ Application setup
 
 In terminal or command line:
 
-  * cd to your local/dir/dig
+  cd to your local/dir/dig
 
   python -m http.server 8000-
 
