@@ -28,5 +28,5 @@ The site consists of three main elements namely:
 ![flyto map](https://user-images.githubusercontent.com/6917448/64493258-43fee000-d27e-11e9-90e8-09463ef29b39.gif))
 The map was inspired by Matt Daniels who did The Pudding's [Population Mountains](https://pudding.cool/2018/12/3d-cities-story/).
 
-
+![transition_gallery](https://user-images.githubusercontent.com/6917448/64493395-eec3ce00-d27f-11e9-84d4-2e7c9a2d0d88.gif)
 The transition gallery was done mostly looking to [Cody House](https://codyhouse.co/gem/page-scroll-effects) and implementing videos.
