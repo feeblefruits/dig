@@ -1,25 +1,10 @@
 {
   "name": "dig",
   "version": "1.0.0",
-  "description": "Dig Application =========================",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "del": "^5.0.0",
-    "glob": "^7.1.4",
-    "gulp": "^4.0.2",
-    "gulp-bless": "^4.0.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-minify": "^3.1.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "uglify": "^0.1.5"
-  },
+  "description": "Dig Application - data visual storytelling microsite for the Mail & Guardian",
   "scripts": {
-    "test": "gulp"
+    "build": "sass assets/sass/main.scss assets/css/main.css --style=compressed --source-map --source-map-urls=relative",
+    "start": "python3 -m http.server 8000"
   },
   "repository": {
     "type": "git",
@@ -31,5 +16,7 @@
     "url": "https://github.com/feeblefruits/dig/issues"
   },
   "homepage": "https://github.com/feeblefruits/dig",
-  "devDependencies": {}
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
 }

@@ -68,7 +68,7 @@ const dotNav = (elem, easing) => {
   //  Dot nav
   const allSecs = document.getElementsByClassName(elem);
   const nav = document.getElementById('dot-nav');
-  const scrollSpeed = 10;
+  const scrollSpeed = 1000;
   let allVis = document.getElementsByClassName('in-viewport'),
       allDots;
   for (let i = 0; i < allSecs.length; i++) {
@@ -99,7 +99,7 @@ const dotNav = (elem, easing) => {
   const dotActive = () => {
     allVis = document.getElementsByClassName('in-viewport');
     allDots = document.getElementsByClassName('dots');
-    visNum = allVis.length;
+    const visNum = allVis.length;
     let a = visNum - 1;
     for (let i = 0; i < allSecs.length; i++) {
       allDots[i].classList.remove('active');
@@ -113,7 +113,7 @@ const dotNav = (elem, easing) => {
   const scrollMe = (e) => {
     let anchor = e.currentTarget.dataset.sec;
     scrollIt(document.querySelector('.section-' + anchor), scrollSpeed, easing);
-    e.preventDefault(document.querySelector('.section-' + anchor));
+    e.preventDefault();
   }
 
   allDots = document.getElementsByClassName('dots');

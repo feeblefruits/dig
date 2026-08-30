@@ -1,8 +1,27 @@
-//GET FONTS
-@import "utilities/*";
-@import "_base";
+// Utilities
+@import "utilities/typography";
+@import "utilities/variables";
+@import "utilities/keyframes";
 
-@import "layout/**/*";
-@import "modules/**/*";
-@import "modules/sections/*";
-@import "modules/map/*";
+@import "base";
+
+// Layout
+@import "layout/header";
+
+// Modules
+@import "modules/families";
+@import "modules/headings";
+@import "modules/m-background-video";
+@import "modules/m-features";
+@import "modules/m-gallery-carousel";
+@import "modules/m-general";
+@import "modules/m-horizontal-bar-chart";
+@import "modules/m-navigation";
+@import "modules/scroll-cta";
+
+// Sections
+@import "modules/sections/m-section-1-landing";
+@import "modules/sections/m-section-2-story";
+@import "modules/sections/m-section-3-narrative";
+@import "modules/sections/m-section-4-claimants";
+@import "modules/sections/m-section-5-map";

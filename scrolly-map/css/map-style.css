@@ -1,0 +1,47 @@
+body { margin: 0; padding: 0; }
+
+#map {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#features {
+  font-family: sans-serif;
+  overflow-y: scroll;
+  background-color: transparent;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  #features {
+    width: 50%;
+    margin-left: 50%;
+  }
+}
+
+.map-chapter {
+  padding-top: 50vh;
+  padding-bottom: 50vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 25px;
+  opacity: 0.99;
+}
+
+.map-chapter:last-child {
+  border-bottom: none;
+  margin-bottom: 200px;
+}
+
+p {
+  padding: 20px;
+  text-align: left;
+  font-size: 17px;
+  line-height: 140%;
+  color: black;
+  background-color: #ffffff;
+  opacity: 0.9;
+}

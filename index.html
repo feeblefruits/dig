@@ -19,14 +19,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0-beta.1/mapbox-gl.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
   <header class="header">
     <ul class="header-list">
       <li class="header-list__item">
         <a href="#" class="header-list__anchor">
-          <img loading="eager" class="header-list__image" src="/assets/images/icons/amp.png">
+          <img loading="eager" class="header-list__image" src="assets/images/icons/amp.png">
         </a>
       </li>
     </ul>
@@ -114,7 +114,7 @@
         </p>
       </div>
       <div class="map-wrapper">
-        <iframe loading="lazy" src="https://feeblefruits.github.io/scrolly-map-index.html" style="border:none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+        <iframe loading="lazy" src="scrolly-map/index.html" style="border:none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
       </div>
       <div class="claimants__content">
         <p class="para">
@@ -137,12 +137,12 @@
           Some of it’s meaningless: some are particularly relevant, like payslips and IDs,” Gliddon says.
         </p>
         <div class='john_chart'>
-          <img src="/assets/images/Graphic-Silicosis-Website-1000px.jpg">
+          <img src="assets/images/Graphic-Silicosis-Website-1000px.jpg">
         </div>
         <p class="para">
           Using computer vision — artificial intelligence that can recognise text
           characters and handwriting — the model he built quickly riffles through
-          information and extracts relevant data. Gliddon, together with his team at <a href="http://www.spotonline.co.za/home">A Spot of Innovation</a>,
+          information and extracts relevant data. Gliddon, together with his team at <a href="https://www.spotonline.co.za/home">A Spot of Innovation</a>,
            is the technical partner of the legal firms who represented the miners.
         </p>
         <p class="para">
@@ -213,72 +213,17 @@
       </div>
       <div class="blurb">
         <div class="blurb__inner">
-          <p>This story is by Jacques Coetzee, who is an Adamela Data Fellow at the Mail & Guardian.
-            His position is funded by the <a href="https://indigotrust.org.uk/">Indigo Trust</a>.<p>
-          <p>Web-design assistance was provided by Mitso Qalaba.<p>
-            Photos from Eswatini were taken by Delwyn Verasamy and those from Lesotho by Paul Botes.</p>
+          <p>This story is by Jacques Coetzee, who is an Adamela Data Fellow at the Mail &amp; Guardian.
+            His position is funded by the <a href="https://indigotrust.org.uk/">Indigo Trust</a>.</p>
+          <p>Web-design assistance was provided by Mitso Qalaba.</p>
+          <p>Photos from Eswatini were taken by Delwyn Verasamy and those from Lesotho by Paul Botes.</p>
           <p>Hiram Alejandro Durán was responsible for the video footage. Code used for this project can
-            be found on <a href="https://github.com/feeblefruits/dig">Github</a> and more coverage about silicosis and the settlement can be found on the <a href="https://mg.co.za/tag/silicosis">Mail & Guardian</a>.
-          <p>
+            be found on <a href="https://github.com/feeblefruits/dig">Github</a> and more coverage about silicosis and the settlement can be found on the <a href="https://mg.co.za/tag/silicosis">Mail &amp; Guardian</a>.</p>
         </div>
       </div>
     </section>
   </div>
 
-  <script src="/assets/js/lib/dot-nav.js"></script>
-  <script src="/assets/js/lib/jquery-2.1.4.js"></script>
-
-  <!--
-  <a id="scrolling" class="scroll-cta" data-sec></a>
-  <script>
-    "use strict";
-    $(function() {
-      var page = $('html, body'),
-          scrollNav = $("#scrolling"),
-          sections = $('.section'),
-          viewportHeight = $(window).height();
-
-      //Perfomance Creep**
-      $(window).on('load scroll', function() {
-        for(var i = 0; i < sections.length; i++) {
-          var sectionClassArray = $(sections[i]).attr("class").split(/\s+/).slice(-1)[0],
-              viewportOffset = sections[i].getBoundingClientRect(),
-              elemTop = viewportOffset.top;
-
-          //Not Live Updating
-          if(elemTop < viewportHeight && elemTop > -1) {
-            var nextSectionNum = $(sections[i]).next().attr("class").split(/\s+/).slice(-1)[0].split(/\s*\-\s*/g)[1]; //Not Live Updating
-
-            if($(sections[i]).prev('.section').length === 0) {
-              scrollNav.removeClass('animate').addClass('animate');
-            } else {
-              scrollNav.removeClass('animate');
-            }
-
-            $('.dots').on('click',function() {
-              var $this = $(this).parent().next();
-              $this.fadeOut('fast', function(){
-                $this.delay(1500).fadeIn('slow');
-              });
-            });
-            scrollNav.attr('data-sec', nextSectionNum);
-            scrollNav.on('click', function(event) {
-              var $this = $(this),
-                  anchor = $this.attr('data-sec'),
-                  nextSection = $('.section-' + anchor);
-                  page.animate({
-                    scrollTop: page.scrollTop() + nextSection.offset().top,
-                  }, 800,'linear',function() {});
-
-                  $this.fadeOut('fast', function(){
-                    $this.delay(1500).fadeIn('slow');
-                  });
-              event.preventDefault();
-            });
-          }
-        }
-      });
-    }); -->
-  </script>
+  <script src="assets/js/lib/dot-nav.js"></script>
 </body>
 </html>

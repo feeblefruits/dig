@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css">
+  <link rel="stylesheet" href="css/map-style.css">
+</head>
+<body>
+  <div class="map-wrapper">
+    <div id="map"></div>
+    <div id="features">
+      <section id="lesotho-eastern-cape" class="map-chapter active">
+        <p>The recorded data shows that Lesotho and the Eastern Cape are by far the most affected regions. <strong>Scroll to see the scale of silicosis in Southern Africa</strong>.</p>
+      </section>
+      <section id="introduction" class="map-chapter">
+        <p>The height of the columns indicates the number of claimants recorded in the database. Port Saint Johns, on the right, has 652.</p>
+      </section>
+      <section id="zimbabwe" class="map-chapter">
+        <p>The majority of Zimbabweans come from the Chipinge which has 247 potential claimants on record.</p>
+      </section>
+      <section id="botswana" class="map-chapter">
+        <p>While the majority of migrant workers from Botswana come from Ramotswa, Thamaga and Mokhomba.</p>
+      </section>
+      <section id="eswatini" class="map-chapter">
+        <p>But the landlocked countries like Eswatini are most affected.</p>
+      </section>
+      <section id="lesotho" class="map-chapter">
+        <p>Lesotho recorded most migrant workers with regions like Maseru, Leribe and Berea having more miners than the towns in South Africa. Maseru alone has 1,954 potential claimants.</p>
+      </section>
+      <section id="eastern-cape" class="map-chapter">
+        <p>In the Eastern Cape however Lusikisiki, Port St John's and Butterworth are home most potential claimants.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/deck.gl@8.9.36/dist.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/map-config.js"></script>
+  <script src="js/map-script.js"></script>
+</body>
+</html>

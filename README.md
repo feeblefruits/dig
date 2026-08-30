@@ -12,9 +12,18 @@ Application setup
 
 In terminal or command line:
 
-  cd to your local/dir/dig
+    cd to your local/dir/dig
+    npm install
+    npm run build
+    cp scrolly-map/js/map-config.example.js scrolly-map/js/map-config.js
 
-  python -m http.server 8000-
+Add your Mapbox public token to `scrolly-map/js/map-config.js`, then run:
+
+    npm start
+
+The build compiles SCSS to compressed CSS using Dart Sass. No Gulp required.
+
+Then open http://localhost:8000 in your browser.
 
 Site overview
 -----------------
